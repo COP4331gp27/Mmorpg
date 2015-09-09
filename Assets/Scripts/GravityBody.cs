@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class GravityBody : MonoBehaviour {
@@ -37,7 +37,7 @@ public class GravityBody : MonoBehaviour {
 			foreach(GravityAttractor planet in attractor){
 				planet.Attract(this.myTransform);
 			}
-		}
+		} 
 	}
 	//RequireComponent(Rigidbody);
 }
