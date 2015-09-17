@@ -45,7 +45,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CameraController.cs" />
      <Compile Include="Assets\Locomotion System Files\Character Controller Scripts\AccelerationCharacterController.cs" />
      <Compile Include="Assets\Locomotion System Files\Character Controller Scripts\AimLookCharacterController.cs" />
      <Compile Include="Assets\Locomotion System Files\Character Controller Scripts\CharacterMotor.cs" />
@@ -80,10 +79,11 @@
      <Compile Include="Assets\Locomotion System Files\Locomotion System\PolarGradientBandInterpolator.cs" />
      <Compile Include="Assets\Locomotion System Files\Locomotion System\TrajectoryVisualizer.cs" />
      <Compile Include="Assets\Locomotion System Files\Locomotion System\Util.cs" />
-     <Compile Include="Assets\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Ball.cs" />
      <Compile Include="Assets\Scripts\BallUserControl.cs" />
+     <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CameraFollowPlayer.cs" />
+     <Compile Include="Assets\Scripts\EnemyMove.cs" />
      <Compile Include="Assets\Scripts\FollowCamera.cs" />
      <Compile Include="Assets\Scripts\GravityAttractor.cs" />
      <Compile Include="Assets\Scripts\GravityBody.cs" />
@@ -91,6 +91,7 @@
      <Compile Include="Assets\Scripts\Not Mine\FauxGravityBody.cs" />
      <Compile Include="Assets\Scripts\Not Mine\FauxGravitySwitch.cs" />
      <Compile Include="Assets\Scripts\Not Mine\PlayerGravityBody.cs" />
+     <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerMove.cs" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
