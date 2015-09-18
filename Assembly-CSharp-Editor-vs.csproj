@@ -58,7 +58,6 @@
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
      <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
      <None Include="Assets\Locomotion System Files\Characters\Heron Artwork\Vegetation-TwoPass.shader" />
-     <None Include="Assets\StonyGroundPackage\InstructionsScene\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
  <Reference Include="Assembly-Boo">
  <HintPath>C:/Users/Paperclip/Documents/mmorpg/Library/ScriptAssemblies/Assembly-Boo.dll</HintPath>
  </Reference>
@@ -123,8 +122,6 @@
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
       <Project>{B553FF4B-7749-A8DA-6592-D3D7DB955DE5}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
-    <ProjectReference Include="Assembly-CSharp-vs.csproj">
-      <Project>{1AB38BC3-EEDE-77EA-F2C8-66CD0FE2AE56}</Project>      <Name>Assembly-CSharp-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
