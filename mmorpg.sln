@@ -1,11 +1,11 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{151674EF-FF61-D9A0-9BF5-E8FDD70B7232}") = "mmorpg", "Assembly-CSharp-firstpass.csproj", "{B553FF4B-7749-A8DA-6592-D3D7DB955DE5}"
+Project("{6790F16B-0499-3442-330A-08BFE59DBACA}") = "MMORPG", "Assembly-CSharp-firstpass.csproj", "{B9597AD4-B13A-4935-97B2-7F22AA487C0E}"
 EndProject
-Project("{151674EF-FF61-D9A0-9BF5-E8FDD70B7232}") = "mmorpg", "Assembly-CSharp.csproj", "{1AB38BC3-EEDE-77EA-F2C8-66CD0FE2AE56}"
+Project("{6790F16B-0499-3442-330A-08BFE59DBACA}") = "MMORPG", "Assembly-CSharp.csproj", "{B8072D92-3F1F-4F1B-AC63-D1F6B738AED0}"
 EndProject
-Project("{151674EF-FF61-D9A0-9BF5-E8FDD70B7232}") = "mmorpg", "Assembly-CSharp-Editor.csproj", "{2C5CB48D-DFD7-A1D0-F205-6B1AE7197820}"
+Project("{6790F16B-0499-3442-330A-08BFE59DBACA}") = "MMORPG", "Assembly-CSharp-Editor.csproj", "{99258B14-271B-89A7-CDA1-06EFF3D31B0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,23 +13,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B553FF4B-7749-A8DA-6592-D3D7DB955DE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B553FF4B-7749-A8DA-6592-D3D7DB955DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B553FF4B-7749-A8DA-6592-D3D7DB955DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B553FF4B-7749-A8DA-6592-D3D7DB955DE5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1AB38BC3-EEDE-77EA-F2C8-66CD0FE2AE56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1AB38BC3-EEDE-77EA-F2C8-66CD0FE2AE56}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1AB38BC3-EEDE-77EA-F2C8-66CD0FE2AE56}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1AB38BC3-EEDE-77EA-F2C8-66CD0FE2AE56}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2C5CB48D-DFD7-A1D0-F205-6B1AE7197820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2C5CB48D-DFD7-A1D0-F205-6B1AE7197820}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2C5CB48D-DFD7-A1D0-F205-6B1AE7197820}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2C5CB48D-DFD7-A1D0-F205-6B1AE7197820}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9597AD4-B13A-4935-97B2-7F22AA487C0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9597AD4-B13A-4935-97B2-7F22AA487C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9597AD4-B13A-4935-97B2-7F22AA487C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9597AD4-B13A-4935-97B2-7F22AA487C0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8072D92-3F1F-4F1B-AC63-D1F6B738AED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8072D92-3F1F-4F1B-AC63-D1F6B738AED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8072D92-3F1F-4F1B-AC63-D1F6B738AED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8072D92-3F1F-4F1B-AC63-D1F6B738AED0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99258B14-271B-89A7-CDA1-06EFF3D31B0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99258B14-271B-89A7-CDA1-06EFF3D31B0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99258B14-271B-89A7-CDA1-06EFF3D31B0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99258B14-271B-89A7-CDA1-06EFF3D31B0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																													GlobalSection(MonoDevelopProperties) = preSolution
+																																																												GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
