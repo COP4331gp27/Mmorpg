@@ -66,6 +66,7 @@ Global
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 																																																			GlobalSection(MonoDevelopProperties) = preSolution
 =======
 																																																												GlobalSection(MonoDevelopProperties) = preSolution
@@ -75,6 +76,9 @@ Global
 >>>>>>> feature/Interfaces
 =======
 																																														GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> feature/weapons
+=======
+																																																		GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> feature/weapons
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0

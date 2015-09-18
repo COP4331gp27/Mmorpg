@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerController : MonoBehaviour {
-	public float speed;
+public class PlayerController : MonoBehaviour 
+{
+	public float speed = 10.0f;
 	public float jumpForce;
 	private Rigidbody rb;
 	
@@ -18,9 +19,9 @@ public class PlayerController : MonoBehaviour {
 		Vector3 movement = new Vector3 (moveVertical, 0.0f, moveHorizontal);
 		movement = Camera.main.transform.TransformDirection(movement);
 		movement.Normalize();
-		//rb.AddForce (movement * speed);
+		rb.AddForce (movement * speed);
 
-		rb.AddTorque (movement * speed);
+		//rb.AddTorque (movement * speed);
 
 		//Show Velocity in Log
 		Debug.Log ("Velocity = "+ rb.velocity.magnitude);
