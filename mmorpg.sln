@@ -7,12 +7,17 @@ Project("{6790F16B-0499-3442-330A-08BFE59DBACA}") = "MMORPG", "Assembly-CSharp.c
 EndProject
 Project("{6790F16B-0499-3442-330A-08BFE59DBACA}") = "MMORPG", "Assembly-CSharp-Editor.csproj", "{99258B14-271B-89A7-CDA1-06EFF3D31B0A}"
 EndProject
+Project("{151674EF-FF61-D9A0-9BF5-E8FDD70B7232}") = "mmorpg", "Assembly-Boo.booproj", "{88545291-6494-447C-782B-A668E848E680}"
+EndProject
+Project("{151674EF-FF61-D9A0-9BF5-E8FDD70B7232}") = "mmorpg", "Assembly-UnityScript.unityproj", "{8EFED9E3-D2AC-4DEC-6D22-C671F3DCA18A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< HEAD
 		{B9597AD4-B13A-4935-97B2-7F22AA487C0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B9597AD4-B13A-4935-97B2-7F22AA487C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9597AD4-B13A-4935-97B2-7F22AA487C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -25,15 +30,41 @@ Global
 		{99258B14-271B-89A7-CDA1-06EFF3D31B0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99258B14-271B-89A7-CDA1-06EFF3D31B0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99258B14-271B-89A7-CDA1-06EFF3D31B0A}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{B553FF4B-7749-A8DA-6592-D3D7DB955DE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B553FF4B-7749-A8DA-6592-D3D7DB955DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B553FF4B-7749-A8DA-6592-D3D7DB955DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B553FF4B-7749-A8DA-6592-D3D7DB955DE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AB38BC3-EEDE-77EA-F2C8-66CD0FE2AE56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AB38BC3-EEDE-77EA-F2C8-66CD0FE2AE56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AB38BC3-EEDE-77EA-F2C8-66CD0FE2AE56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AB38BC3-EEDE-77EA-F2C8-66CD0FE2AE56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C5CB48D-DFD7-A1D0-F205-6B1AE7197820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C5CB48D-DFD7-A1D0-F205-6B1AE7197820}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C5CB48D-DFD7-A1D0-F205-6B1AE7197820}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C5CB48D-DFD7-A1D0-F205-6B1AE7197820}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88545291-6494-447C-782B-A668E848E680}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88545291-6494-447C-782B-A668E848E680}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88545291-6494-447C-782B-A668E848E680}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88545291-6494-447C-782B-A668E848E680}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EFED9E3-D2AC-4DEC-6D22-C671F3DCA18A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EFED9E3-D2AC-4DEC-6D22-C671F3DCA18A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EFED9E3-D2AC-4DEC-6D22-C671F3DCA18A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EFED9E3-D2AC-4DEC-6D22-C671F3DCA18A}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> feature/Interfaces
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 <<<<<<< HEAD
+<<<<<<< HEAD
 																																																			GlobalSection(MonoDevelopProperties) = preSolution
 =======
 																																																												GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> feature/GUI
+=======
+																																															GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> feature/Interfaces
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
