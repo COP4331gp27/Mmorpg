@@ -7,6 +7,10 @@ Project("{151674EF-FF61-D9A0-9BF5-E8FDD70B7232}") = "mmorpg", "Assembly-CSharp.c
 EndProject
 Project("{151674EF-FF61-D9A0-9BF5-E8FDD70B7232}") = "mmorpg", "Assembly-CSharp-Editor.csproj", "{2C5CB48D-DFD7-A1D0-F205-6B1AE7197820}"
 EndProject
+Project("{151674EF-FF61-D9A0-9BF5-E8FDD70B7232}") = "mmorpg", "Assembly-Boo.booproj", "{88545291-6494-447C-782B-A668E848E680}"
+EndProject
+Project("{151674EF-FF61-D9A0-9BF5-E8FDD70B7232}") = "mmorpg", "Assembly-UnityScript.unityproj", "{8EFED9E3-D2AC-4DEC-6D22-C671F3DCA18A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,11 +29,19 @@ Global
 		{2C5CB48D-DFD7-A1D0-F205-6B1AE7197820}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C5CB48D-DFD7-A1D0-F205-6B1AE7197820}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C5CB48D-DFD7-A1D0-F205-6B1AE7197820}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88545291-6494-447C-782B-A668E848E680}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88545291-6494-447C-782B-A668E848E680}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88545291-6494-447C-782B-A668E848E680}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88545291-6494-447C-782B-A668E848E680}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EFED9E3-D2AC-4DEC-6D22-C671F3DCA18A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EFED9E3-D2AC-4DEC-6D22-C671F3DCA18A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EFED9E3-D2AC-4DEC-6D22-C671F3DCA18A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EFED9E3-D2AC-4DEC-6D22-C671F3DCA18A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																													GlobalSection(MonoDevelopProperties) = preSolution
+																																														GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
