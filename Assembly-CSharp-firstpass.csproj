@@ -6,9 +6,12 @@
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<RootNamespace></RootNamespace>
 	<ProjectGuid>{DCA5EF53-2002-30CF-B3AF-D10686458720}</ProjectGuid>
 =======
+=======
+>>>>>>> feature/weapons
 	<ProjectGuid>{B553FF4B-7749-A8DA-6592-D3D7DB955DE5}</ProjectGuid>
 >>>>>>> feature/Interfaces
 	<OutputType>Library</OutputType>
@@ -124,6 +127,7 @@
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Workplace/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
+<<<<<<< HEAD
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Workplace/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
  </Reference>
@@ -137,6 +141,10 @@
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>E:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+=======
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+>>>>>>> feature/weapons
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>E:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

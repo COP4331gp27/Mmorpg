@@ -6,9 +6,12 @@
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<RootNamespace></RootNamespace>
 	<ProjectGuid>{36FECB0F-D191-A31D-6A4E-3B586F3B7791}</ProjectGuid>
 =======
+=======
+>>>>>>> feature/weapons
 	<ProjectGuid>{1AB38BC3-EEDE-77EA-F2C8-66CD0FE2AE56}</ProjectGuid>
 >>>>>>> feature/Interfaces
 	<OutputType>Library</OutputType>
@@ -114,6 +117,7 @@
      <Compile Include="Assets\Scripts\Not Mine\PlayerGravityBody.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerMove.cs" />
+     <Compile Include="Assets\Scripts\Sword.cs" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
@@ -131,6 +135,7 @@
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Workplace/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
+<<<<<<< HEAD
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Workplace/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
  </Reference>
@@ -144,6 +149,10 @@
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>E:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+=======
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+>>>>>>> feature/weapons
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>E:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
