@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class PlayorNah : MonoBehaviour 
+public class MainMenu : MonoBehaviour 
 {
 	public Canvas quitMenu;
 	public Canvas settingsMenu;
@@ -15,11 +15,17 @@ public class PlayorNah : MonoBehaviour
 	void Start () 
 	{
 		quitMenu = quitMenu.GetComponent<Canvas> ();
+		settingsMenu = settingsMenu.GetComponent<Canvas> ();
+		helpMenu = helpMenu.GetComponent<Canvas> ();
+
 		resumeText = resumeText.GetComponent<Button> ();
 		exitText = exitText.GetComponent<Button> ();
 		settingsText = settingsText.GetComponent<Button> ();
 		helpText = helpText.GetComponent<Button> ();
+
 		quitMenu.enabled = false;
+		settingsMenu.enabled = false;
+		helpMenu.enabled = false;
 	}
 	
 	public void returnMain()
@@ -27,6 +33,7 @@ public class PlayorNah : MonoBehaviour
 		quitMenu.enabled = false;
 		settingsMenu.enabled = false;
 		helpMenu.enabled = false;
+
 		resumeText.enabled = true;
 		exitText.enabled = true;
 		helpText.enabled = true;
@@ -37,7 +44,8 @@ public class PlayorNah : MonoBehaviour
 	{
 		quitMenu.enabled = true;
 		settingsMenu.enabled = false;
-		helpMenu.enabled = true;
+		helpMenu.enabled = false;
+
 		resumeText.enabled = false;
 		exitText.enabled = false;
 		settingsText.enabled = false;
@@ -48,7 +56,8 @@ public class PlayorNah : MonoBehaviour
 	{
 		quitMenu.enabled = false;
 		settingsMenu.enabled = false;
-		helpMenu.enabled = true;
+		helpMenu.enabled = false;
+
 		resumeText.enabled = true;
 		exitText.enabled = true;
 		helpText.enabled = true;
