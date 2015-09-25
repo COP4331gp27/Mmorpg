@@ -10,25 +10,39 @@
 using System;
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+namespace AssemblyCSharp
+{
+	
+	public interface IKillable<T>{
+		void Kill(T Health);
+	}
+	
+	public interface IDamagable<T>{
+		void takeDamage(T damageTaken);
+	}
+	
+	public interface IDestructible<T>{
+		void Destroy(T item);
+	}
+	
+	public interface IItems{
+		void pickUpItem(ItemData item);
+		void dropItem(List<ItemData> inventory);
+	}
+	
 
-public interface IKillable<T>{
-	void Kill(float Health, T actor);
+
+	public interface IExperience{
+        void dropExp(int orbs);
+		void gainExp(Experience orbs);
+		void gainLevel(int level);
+	}
+
+	public interface IVendor{
+		void openShop(GameObject player);
+	}
+
+
 }
 
-public interface IDamagable<T>{
-	void Damage(T damageTaken);
-}
-
-public interface IDestructible<T>{
-	void Destroy(T item);
-}
-
-public interface IItems<T>{
-	void pickUpItem(T inventory);
-	void dropItem(T inventory);
-}
-
-public interface IExperience{
-	void getExp(int orbs);
-	void gainLevel(int level);
-}

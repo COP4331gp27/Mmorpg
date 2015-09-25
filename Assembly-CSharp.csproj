@@ -5,15 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-<<<<<<< HEAD
-<<<<<<< HEAD
-	<RootNamespace></RootNamespace>
-	<ProjectGuid>{36FECB0F-D191-A31D-6A4E-3B586F3B7791}</ProjectGuid>
-=======
-=======
->>>>>>> feature/weapons
 	<ProjectGuid>{1AB38BC3-EEDE-77EA-F2C8-66CD0FE2AE56}</ProjectGuid>
->>>>>>> feature/Interfaces
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -47,74 +39,35 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-<<<<<<< HEAD
-	  <HintPath>C:/Workplace/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
-	</Reference>
-	<Reference Include="UnityEditor">
-	  <HintPath>C:/Workplace/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
-=======
 	  <HintPath>E:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
 	  <HintPath>E:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
->>>>>>> feature/Interfaces
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-=======
-     <Compile Include="Assets\CameraController.cs" />
      <Compile Include="Assets\GUI\MainMenu.cs" />
      <Compile Include="Assets\GUI\ToMenu.cs" />
->>>>>>> feature/GUI
-     <Compile Include="Assets\Locomotion System Files\Character Controller Scripts\AccelerationCharacterController.cs" />
-     <Compile Include="Assets\Locomotion System Files\Character Controller Scripts\AimLookCharacterController.cs" />
-     <Compile Include="Assets\Locomotion System Files\Character Controller Scripts\CharacterMotor.cs" />
-     <Compile Include="Assets\Locomotion System Files\Character Controller Scripts\FPSCharacterController.cs" />
-     <Compile Include="Assets\Locomotion System Files\Character Controller Scripts\Follower.cs" />
-     <Compile Include="Assets\Locomotion System Files\Character Controller Scripts\JumpAndIdle.cs" />
-     <Compile Include="Assets\Locomotion System Files\Character Controller Scripts\MouseLookCharacterController.cs" />
-     <Compile Include="Assets\Locomotion System Files\Character Controller Scripts\NormalCharacterMotor.cs" />
-     <Compile Include="Assets\Locomotion System Files\Character Controller Scripts\PhysicsCharacterMotor.cs" />
-     <Compile Include="Assets\Locomotion System Files\Character Controller Scripts\PlatformCharacterController.cs" />
-     <Compile Include="Assets\Locomotion System Files\Character Controller Scripts\WanderingAICharacterController.cs" />
-     <Compile Include="Assets\Locomotion System Files\Demo Scenes\Demo Scene Scripts\FramesPerSecond.cs" />
-     <Compile Include="Assets\Locomotion System Files\Demo Scenes\Demo Scene Scripts\PlanetCamera.cs" />
-     <Compile Include="Assets\Locomotion System Files\Demo Scenes\Demo Scene Scripts\SmoothFollowCamera.cs" />
-     <Compile Include="Assets\Locomotion System Files\Demo Scenes\Demo Scene Scripts\SmoothFollowCamera2.cs" />
-     <Compile Include="Assets\Locomotion System Files\Demo Scenes\Demo Scene Scripts\StepController.cs" />
-     <Compile Include="Assets\Locomotion System Files\Demo Scenes\Demo Scene Scripts\StepWalkSwitcher.cs" />
-     <Compile Include="Assets\Locomotion System Files\Demo Scenes\Demo Scene Scripts\TestSwitcher.cs" />
-     <Compile Include="Assets\Locomotion System Files\Demo Scenes\Demo Scene Scripts\TimeController.cs" />
-     <Compile Include="Assets\Locomotion System Files\Locomotion System\AlignmentTracker.cs" />
-     <Compile Include="Assets\Locomotion System Files\Locomotion System\GhostOriginal.cs" />
-     <Compile Include="Assets\Locomotion System Files\Locomotion System\HeadLookController.cs" />
-     <Compile Include="Assets\Locomotion System Files\Locomotion System\IK1JointAnalytic.cs" />
-     <Compile Include="Assets\Locomotion System Files\Locomotion System\IKSimple.cs" />
-     <Compile Include="Assets\Locomotion System Files\Locomotion System\IKSolver.cs" />
-     <Compile Include="Assets\Locomotion System Files\Locomotion System\IMotionAnalyzer.cs" />
-     <Compile Include="Assets\Locomotion System Files\Locomotion System\Interpolator.cs" />
-     <Compile Include="Assets\Locomotion System Files\Locomotion System\LegAnimator.cs" />
-     <Compile Include="Assets\Locomotion System Files\Locomotion System\LegController.cs" />
-     <Compile Include="Assets\Locomotion System Files\Locomotion System\MotionAnalyzer.cs" />
-     <Compile Include="Assets\Locomotion System Files\Locomotion System\MotionAnalyzerBackwards.cs" />
-     <Compile Include="Assets\Locomotion System Files\Locomotion System\PolarGradientBandInterpolator.cs" />
-     <Compile Include="Assets\Locomotion System Files\Locomotion System\TrajectoryVisualizer.cs" />
-     <Compile Include="Assets\Locomotion System Files\Locomotion System\Util.cs" />
+     <Compile Include="Assets\Scripts\Actor.cs" />
      <Compile Include="Assets\Scripts\Ball.cs" />
      <Compile Include="Assets\Scripts\BallUserControl.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CameraFollowPlayer.cs" />
+     <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Scripts\EnemyMove.cs" />
+     <Compile Include="Assets\Scripts\Experience.cs" />
      <Compile Include="Assets\Scripts\FollowCamera.cs" />
      <Compile Include="Assets\Scripts\GravityAttractor.cs" />
      <Compile Include="Assets\Scripts\GravityBody.cs" />
+     <Compile Include="Assets\Scripts\Hammer.cs" />
      <Compile Include="Assets\Scripts\Interfaces.cs" />
+     <Compile Include="Assets\Scripts\ItemData.cs" />
      <Compile Include="Assets\Scripts\Not Mine\FauxGravityAttractor.cs" />
      <Compile Include="Assets\Scripts\Not Mine\FauxGravityBody.cs" />
      <Compile Include="Assets\Scripts\Not Mine\FauxGravitySwitch.cs" />
      <Compile Include="Assets\Scripts\Not Mine\PlayerGravityBody.cs" />
+     <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerMove.cs" />
      <Compile Include="Assets\Scripts\Sword.cs" />
@@ -127,21 +80,8 @@
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
      <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
-     <None Include="Assets\Locomotion System Files\Characters\Heron Artwork\Vegetation-TwoPass.shader" />
+     <None Include="Assets\StonyGroundPackage\InstructionsScene\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
  <Reference Include="UnityEngine.UI">
-<<<<<<< HEAD
- <HintPath>C:/Workplace/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Networking">
- <HintPath>C:/Workplace/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
-<<<<<<< HEAD
- <Reference Include="Mono.Cecil">
- <HintPath>C:/Workplace/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>C:/Workplace/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-=======
  <HintPath>E:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
@@ -149,19 +89,14 @@
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>E:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
-=======
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
->>>>>>> feature/weapons
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>E:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
->>>>>>> feature/Interfaces
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{DCA5EF53-2002-30CF-B3AF-D10686458720}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{B553FF4B-7749-A8DA-6592-D3D7DB955DE5}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
