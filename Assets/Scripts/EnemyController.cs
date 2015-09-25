@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class EnemyController : MonoBehaviour {
-	private float accl = 5;
-	private int maxSpeed = 20;
+	private float accl = 2;
+	private int maxSpeed = 10;
 	public GameObject target;
 	private Rigidbody rb;
 
