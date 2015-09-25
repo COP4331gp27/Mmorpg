@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.mmorpg.CSharp.Plugins", "UnityVS.mmorpg.CSharp.Plugins.csproj", "{11C0D31B-304B-6869-5CC9-EECCA3D30576}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.mmorpg.CSharp", "UnityVS.mmorpg.CSharp.csproj", "{57C3A366-99D2-1F16-20FA-770C60F63444}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.mmorpg.CSharp.Editor", "UnityVS.mmorpg.CSharp.Editor.csproj", "{1B1AC1B5-1664-05A5-3DA6-41DFCE14079A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11C0D31B-304B-6869-5CC9-EECCA3D30576}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11C0D31B-304B-6869-5CC9-EECCA3D30576}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11C0D31B-304B-6869-5CC9-EECCA3D30576}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11C0D31B-304B-6869-5CC9-EECCA3D30576}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57C3A366-99D2-1F16-20FA-770C60F63444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57C3A366-99D2-1F16-20FA-770C60F63444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57C3A366-99D2-1F16-20FA-770C60F63444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57C3A366-99D2-1F16-20FA-770C60F63444}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B1AC1B5-1664-05A5-3DA6-41DFCE14079A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B1AC1B5-1664-05A5-3DA6-41DFCE14079A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B1AC1B5-1664-05A5-3DA6-41DFCE14079A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B1AC1B5-1664-05A5-3DA6-41DFCE14079A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
