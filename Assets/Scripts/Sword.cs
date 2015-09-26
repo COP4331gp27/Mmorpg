@@ -23,14 +23,14 @@ public class Sword : MonoBehaviour
     void LateUpdate()
     {
         //While Holding Left Click Rotate weapon Around  
-
-        offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * turnSpeed, Vector3.up) * offset;
-        //Causes problems with clipping
-        offset = Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * turnSpeed, Vector3.right) * offset;
-        transform.forward = player.forward;
-        transform.position = player.position + offset;
-        transform.LookAt(player.position);
-
+		if (!player.Equals (null)) {
+			offset = Quaternion.AngleAxis (Input.GetAxis ("Mouse X") * turnSpeed, Vector3.up) * offset;
+			//Causes problems with clipping
+			offset = Quaternion.AngleAxis (Input.GetAxis ("Mouse Y") * turnSpeed, Vector3.right) * offset;
+			transform.forward = player.forward;
+			transform.position = player.position + offset;
+			transform.LookAt (player.position);
+		}
 
     }
     public void setWeapon(bool pickedUp)
