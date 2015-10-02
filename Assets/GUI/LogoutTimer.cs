@@ -46,5 +46,7 @@ public class LogoutTimer : MonoBehaviour
 	public void CancelPressed()
 	{ 
 		timerNum = 10;
-	}
+        TimerText.text = "" + timerNum;
+        timeElapsed = 0.0f;
+    }
 }

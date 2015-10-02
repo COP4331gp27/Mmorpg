@@ -15,14 +15,19 @@ public class ToMenu : MonoBehaviour
 
 	public void MenuPress()
 	{
-		mainMenu.enabled = true;
-		toMenu.enabled = false;
+        if ( mainMenu.enabled  )
+        {
+            mainMenu.enabled = false;
+        }
+        else
+        {
+            mainMenu.enabled = true;
+        }		
 	}
 	
 	public void resumePress()
 	{
-		mainMenu.enabled = false;
-		toMenu.enabled = true;
+		mainMenu.enabled = false;		
 	}
 
 }
