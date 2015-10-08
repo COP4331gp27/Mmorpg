@@ -84,6 +84,7 @@ public class Player : Actor, IExperience{
             //play death animation
             dropExp(playerLevel * 10);
             this.gameObject.SetActive(false);
+			Debug.Log("Player Killed");
             
 		}
 	}

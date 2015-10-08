@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour 
 {
-	public float speed = 10.0f;
+	public float speed = 30.0f;
 	public float jumpForce;
 	private Rigidbody rb;
 	public Camera cam;
