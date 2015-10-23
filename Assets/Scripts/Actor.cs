@@ -14,7 +14,7 @@ public abstract class Actor : MonoBehaviour, IKillable<int>, IDamagable<int>, II
 	public virtual void pickUpItem(ItemData item){
 
 	}
-	public virtual void dropItem(List<ItemData> inventory){
+	public virtual void dropItem(InventoryManager inventory){
 
 	}
 }

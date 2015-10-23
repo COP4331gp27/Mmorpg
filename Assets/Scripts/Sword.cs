@@ -47,10 +47,43 @@ public class Sword : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         //USING TRIGGERS FOR NON-COMBAT
-        if (other.tag == "Player")
+        if (other.tag == "Player" && other.GetComponent<InventoryManager>().findSpecificItem("PlayerSword") == false)
         {
-            setWeapon(true);
-            player = other.transform;
+            ItemData swordItem = this.GetComponent<ItemData>();
+            //need to figure this out without using Find. It's expensive
+            //Transform temp = other.transform.GetChild(1);
+            //foreach (GameObject child in temp)
+            //{
+            //    if (child.ToString()
+            //}
+            Transform swordTransform = other.transform.GetChild(1).Find("PlayerSword");
+            //Transform swordObject = sword.GetComponent<Transform>();
+            //Debug.Log("WHAT AM I?!: " + swordTransform.ToString());
+            Player p = other.GetComponent<Player>();
+            p.pickUpItem(swordItem);
+            Sword sword = swordTransform.GetComponent<Sword>();
+            sword.player = p.GetComponent<Transform>();
+            swordTransform.gameObject.SetActive(true);
+            
+            
+        }
+    }
+
+   
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.tag == "Player" && this.playerHas)
+        {
+            Debug.Log("WHY AM I IN HERE?!");
+            Player p = collision.collider.GetComponent<Player>();
+            Player owner = this.GetComponent<Player>();
+            p.takeDamage(getDamage()+owner.getDamage());
+            Debug.Log("Damaged player!" + "\tPlayer's Health = " + p.playerHealth);
+        }
+        else
+        {
+
         }
     }
 }
