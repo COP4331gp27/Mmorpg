@@ -1,0 +1,1262 @@
+fileFormatVersion: 2
+guid: 838b1359152cef3499d37be07c5688bd
+timeCreated: 1445556040
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Weapon Sprites_0
+    21300002: Weapon Sprites_1
+    21300004: Weapon Sprites_2
+    21300006: Weapon Sprites_3
+    21300008: Weapon Sprites_4
+    21300010: Weapon Sprites_5
+    21300012: Weapon Sprites_6
+    21300014: Weapon Sprites_7
+    21300016: Weapon Sprites_8
+    21300018: Weapon Sprites_9
+    21300020: Weapon Sprites_10
+    21300022: Weapon Sprites_11
+    21300024: Weapon Sprites_12
+    21300026: Weapon Sprites_13
+    21300028: Weapon Sprites_14
+    21300030: Weapon Sprites_15
+    21300032: Weapon Sprites_16
+    21300034: Weapon Sprites_17
+    21300036: Weapon Sprites_18
+    21300038: Weapon Sprites_19
+    21300040: Weapon Sprites_20
+    21300042: Weapon Sprites_21
+    21300044: Weapon Sprites_22
+    21300046: Weapon Sprites_23
+    21300048: Weapon Sprites_24
+    21300050: Weapon Sprites_25
+    21300052: Weapon Sprites_26
+    21300054: Weapon Sprites_27
+    21300056: Weapon Sprites_28
+    21300058: Weapon Sprites_29
+    21300060: Weapon Sprites_30
+    21300062: Weapon Sprites_31
+    21300064: Weapon Sprites_32
+    21300066: Weapon Sprites_33
+    21300068: Weapon Sprites_34
+    21300070: Weapon Sprites_35
+    21300072: Weapon Sprites_36
+    21300074: Weapon Sprites_37
+    21300076: Weapon Sprites_38
+    21300078: Weapon Sprites_39
+    21300080: Weapon Sprites_40
+    21300082: Weapon Sprites_41
+    21300084: Weapon Sprites_42
+    21300086: Weapon Sprites_43
+    21300088: Weapon Sprites_44
+    21300090: Weapon Sprites_45
+    21300092: Weapon Sprites_46
+    21300094: Weapon Sprites_47
+    21300096: Weapon Sprites_48
+    21300098: Weapon Sprites_49
+    21300100: Weapon Sprites_50
+    21300102: Weapon Sprites_51
+    21300104: Weapon Sprites_52
+    21300106: Weapon Sprites_53
+    21300108: Weapon Sprites_54
+    21300110: Weapon Sprites_55
+    21300112: Weapon Sprites_56
+    21300114: Weapon Sprites_57
+    21300116: Weapon Sprites_58
+    21300118: Weapon Sprites_59
+    21300120: Weapon Sprites_60
+    21300122: Weapon Sprites_61
+    21300124: Weapon Sprites_62
+    21300126: Weapon Sprites_63
+    21300128: Weapon Sprites_64
+    21300130: Weapon Sprites_65
+    21300132: Weapon Sprites_66
+    21300134: Weapon Sprites_67
+    21300136: Weapon Sprites_68
+    21300138: Weapon Sprites_69
+    21300140: Weapon Sprites_70
+    21300142: Weapon Sprites_71
+    21300144: Weapon Sprites_72
+    21300146: Weapon Sprites_73
+    21300148: Weapon Sprites_74
+    21300150: Weapon Sprites_75
+    21300152: Weapon Sprites_76
+    21300154: Weapon Sprites_77
+    21300156: Weapon Sprites_78
+    21300158: Weapon Sprites_79
+    21300160: Weapon Sprites_80
+    21300162: Weapon Sprites_81
+    21300164: Weapon Sprites_82
+    21300166: Weapon Sprites_83
+    21300168: Weapon Sprites_84
+    21300170: Weapon Sprites_85
+    21300172: Weapon Sprites_86
+    21300174: Weapon Sprites_87
+    21300176: Weapon Sprites_88
+    21300178: Weapon Sprites_89
+    21300180: Weapon Sprites_90
+    21300182: Weapon Sprites_91
+    21300184: Weapon Sprites_92
+    21300186: Weapon Sprites_93
+    21300188: Weapon Sprites_94
+    21300190: Weapon Sprites_95
+    21300192: Weapon Sprites_96
+    21300194: Weapon Sprites_97
+    21300196: Weapon Sprites_98
+    21300198: Weapon Sprites_99
+    21300200: Spatha
+    21300202: Squire Sword
+    21300204: Rapier+
+    21300206: Rapier+
+    21300208: The Golden Punisher
+    21300210: Ice Blade
+    21300212: Knight Sword
+    21300214: The Cloud Blade
+    21300216: Short Sword+
+    21300218: Short Sword
+    21300220: Sword
+    21300222: Mace+
+    21300224: Warhammer+
+    21300226: Fistula
+    21300228: Square Shield+
+    21300230: Spear++
+    21300232: Musket
+    21300234: Shotgunne
+    21300236: Recurve Bow++
+    21300238: Bill
+    21300240: The Butcher
+    21300242: Dagger+
+    21300244: Dagger
+    21300246: Bow
+    21300248: Mace+
+    21300250: Demon Axe
+    21300252: King Sword
+    21300254: Rusted Blade
+    21300256: Poleaxe
+    21300258: Recurve Bow
+    21300260: Crossbow
+    21300262: Crossbow++
+    21300264: Staff
+    21300266: Moon Staff
+    21300268: Knuckle Sword
+    21300270: Switchblade
+    21300272: Farmer's Axe
+    21300274: Tomahawk+
+    21300276: Handaxe
+    21300278: The Chopper
+    21300280: Small Shield
+    21300282: Small Shield+
+    21300284: Cricket Bat
+    21300286: Spear
+    21300288: Spear+
+    21300290: Notched Blade++
+    21300292: Offhand Sword
+    21300294: Healing Sword
+    21300296: Rapier+
+    21300298: Tower Shield+
+    21300300: Axe
+    21300302: Flintlock
+    21300304: Flintlock+
+    21300306: Flintlock++
+    21300308: Small Spear
+    21300310: Sai
+    21300312: Staff+
+    21300314: Warhammer
+    21300316: Emerald Sword
+    21300318: Poleaxe+
+    21300320: Square Shield
+    21300322: Nature Staff
+    21300324: Royal Shield
+    21300326: Crossbow+
+    21300328: Sword
+    21300330: Cudgel
+    21300332: Golden Scepter
+    21300334: Icecream Cone
+    21300336: Recurve Bow+
+    21300338: The Savage
+    21300340: Crossbow
+    21300342: Claymore+
+    21300344: Offhand Dagger
+    21300346: Galtar
+    21300348: Chakram
+    21300350: Katar
+    21300352: Morning Star
+    21300354: Prison Spear
+    21300356: Bo Staff
+    21300358: Nunchuks
+    21300360: Tower Shield
+    21300362: Shield
+    21300364: Dark Staff
+    21300366: Longbow
+    21300368: Buckler
+    21300370: Meteor Hammer
+    21300372: Zweihander
+    21300374: Tribal Axe
+    21300376: Sword-staff
+    21300378: Golok
+    21300380: Sai+
+    21300382: Brass Knuckles
+    21300384: Monk's Fork
+    21300386: Hooked Sword
+    21300388: Scissor
+    21300390: Notched Blade
+    21300392: Scimitar
+    21300394: Tomahawk++
+    21300396: Blackjack
+    21300398: Tonfa
+    21300400: Rapier++
+    21300402: WeaponSprites_10
+    21300404: Arbalest
+    21300406: Demon Sword
+    21300408: Rapier
+    21300410: Mace
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Spatha
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 402
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Squire Sword
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 402
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rapier++
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 402
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rapier
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 402
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: The Golden Punisher
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 403
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ice Blade
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 402
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Knight Sword
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 402
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: The Cloud Blade
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 403
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Short Sword+
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 401
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Short Sword
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 402
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Demon Sword
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 402
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mace
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 402
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warhammer+
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 402
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Fistula
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 402
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Square Shield+
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 402
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spear++
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 402
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Musket
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 402
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Shotgunne
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 402
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Recurve Bow++
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 402
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bill
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 402
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: The Butcher
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 302
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dagger+
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 302
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dagger
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 302
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bow
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 302
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mace+
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 302
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Demon Axe
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 302
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: King Sword
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 302
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rusted Blade
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 302
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Poleaxe
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 302
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Recurve Bow
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 302
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Crossbow
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 301
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Crossbow++
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 302
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Staff
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 302
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Moon Staff
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 301
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Knuckle Sword
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 302
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Switchblade
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 302
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Farmer's Axe
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 302
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tomahawk+
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 302
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Handaxe
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 301
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: The Chopper
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 302
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Small Shield
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 202
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Small Shield+
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 202
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cricket Bat
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 202
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spear
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 202
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spear+
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 202
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Notched Blade++
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 202
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Offhand Sword
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 202
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Healing Sword
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 202
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Rapier+
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 202
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tower Shield+
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 202
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Axe
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 202
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Flintlock
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 202
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Flintlock+
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 202
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Flintlock++
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 202
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Small Spear
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 202
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sai
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 202
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Staff+
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 202
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warhammer
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 202
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Emerald Sword
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 202
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Poleaxe+
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 202
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Square Shield
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 102
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nature Staff
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 102
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Royal Shield
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 102
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Crossbow+
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 102
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sword
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 102
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cudgel
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 102
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Golden Scepter
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 102
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Icecream Cone
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 102
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Recurve Bow+
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 102
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: The Savage
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 101
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Arbalest
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 102
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Claymore+
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 102
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Offhand Dagger
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 102
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Galtar
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 102
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Chakram
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 102
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Katar
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 102
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Morning Star
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 102
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Prison Spear
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 102
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bo Staff
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 102
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Nunchuks
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 102
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tower Shield
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 4
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Shield
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 2
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dark Staff
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 2
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Longbow
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 2
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Buckler
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 2
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Meteor Hammer
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 2
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zweihander
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 2
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tribal Axe
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 2
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sword-staff
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 2
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Golok
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 2
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sai+
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 2
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Brass Knuckles
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 2
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Monk's Fork
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 2
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Hooked Sword
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 2
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Scissor
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 2
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Notched Blade
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 2
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Scimitar
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 2
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tomahawk++
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 2
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blackjack
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 2
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tonfa
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 2
+        width: 40
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: Weapon
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
