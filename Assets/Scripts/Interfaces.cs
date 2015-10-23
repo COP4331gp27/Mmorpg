@@ -28,7 +28,7 @@ namespace AssemblyCSharp
 	
 	public interface IItems{
 		void pickUpItem(ItemData item);
-		void dropItem(List<ItemData> inventory);
+		void dropItem(InventoryManager inventory);
 	}
 	
 

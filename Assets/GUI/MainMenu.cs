@@ -30,7 +30,7 @@ public class MainMenu : MonoBehaviour
 		settingsText = settingsText.GetComponent<Button> ();
 		helpText = helpText.GetComponent<Button> ();
 
-		time = new LogoutTimer();
+		time = this.GetComponentInParent<LogoutTimer>();
 		
 		quitMenu.enabled = false;
 		logoutMenu.enabled = false;

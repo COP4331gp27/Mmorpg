@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using AssemblyCSharp;
 using UnityEngine.Networking;
+using System.Linq;
 //using System;
 
 public class Player : Actor, IExperience{
@@ -16,15 +17,18 @@ public class Player : Actor, IExperience{
     private float experience;
     private int playerLevel = 1;
     public int playerHealth = 100;
+    private int damage;
     private ArrayList otherPlayers = new ArrayList();
 	public string playerName;
     public Transform expOrb;
     private Vector3 dropDistance;
-    private List<ItemData> inventory = new List<ItemData>();
+    private InventoryManager myInventory;
     // Use this for initialization
     void Start()
     {
+        myInventory = new InventoryManager(30);
         //find all the players in the game
+        damage = playerLevel;
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         playerHealth += (playerLevel * 10);
         //populate an arraylist of these player's names
@@ -32,7 +36,7 @@ public class Player : Actor, IExperience{
         {
             otherPlayers.Add(p.GetComponent<Player>().getName());
         }
-
+        
     }
 
     // Update is called once per frame
@@ -70,7 +74,13 @@ public class Player : Actor, IExperience{
         {
             gainLevel(1);
             this.experience = 0;
+            damage++;
         }
+    }
+
+    public int getDamage()
+    {
+        return damage;
     }
 
     public void gainLevel(int level)
@@ -93,12 +103,16 @@ public class Player : Actor, IExperience{
 	}
 
 	public override void pickUpItem(ItemData item){
-        inventory.Add(item);
+        myInventory.add(item);
 	}
-	public override void dropItem(List<ItemData> inventory){
-		
+	public override void dropItem(InventoryManager inventory){
+		//create object that holds all of player's dropped items for other players to pick up
+        //this object must be able to be picked up and parsed by the other player's inventory system
+        //it should have an InventoryManager attached to it
+        //run through that manager and add any items that the not-dead player doesn't have and add it
+        //to their inventory
 	}
-
+    
     public int getLevel()
     {
         return playerLevel;

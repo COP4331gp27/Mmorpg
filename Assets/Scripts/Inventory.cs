@@ -2,28 +2,20 @@
 using System.Collections;
 
 public class Inventory : MonoBehaviour {
-	public Canvas screen;
-	private bool visable = false;
-
-
+    public Canvas inventCanvas;
+    private bool switcher;
 	// Use this for initialization
 	void Start () {
-		screen = Instantiate (screen);
-		screen.gameObject.SetActive(false);
+        switcher = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown("i")){
-			Debug.Log("toggle to " + visable);
-			visable = !visable;
-			screen.gameObject.SetActive(visable);
-		}
+        if (Input.GetButtonDown("i"))
+        {
+            switcher = !switcher;
+            inventCanvas = this.GetComponent<Canvas>();
+            inventCanvas.enabled = switcher;
+        }
 	}
-
-
-	void updateList(ItemData[] items){
-
-	}
-
 }
