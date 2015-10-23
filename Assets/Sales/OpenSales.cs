@@ -4,21 +4,21 @@ using System.Collections;
 
 public class OpenSales : MonoBehaviour
 {
-    public Canvas InventoryScreen;
+    public Canvas ShopScreen;
     public Canvas Main;
     public Canvas Help;
     public Canvas Settings;
 
     void Start ()
     {
-        InventoryScreen = InventoryScreen.GetComponent<Canvas>();
+        ShopScreen = ShopScreen.GetComponent<Canvas>();
         Main = Main.GetComponent<Canvas>();
         Help = Help.GetComponent<Canvas>();
         Settings = Settings.GetComponent<Canvas>();
         Main.enabled = false;
         Help.enabled = false;
         Settings.enabled = false;
-        InventoryScreen.enabled = false;
+        ShopScreen.enabled = false;
     }
 
    /* void OnTriggerEnter(Collider other)
@@ -33,16 +33,16 @@ public class OpenSales : MonoBehaviour
     {
         if (other.tag == "Player" && (!Main.enabled && !Help.enabled && !Settings.enabled))
         {
-            InventoryScreen.enabled = true;
+            ShopScreen.enabled = true;
         }
         else
         {
-            InventoryScreen.enabled = false;
+            ShopScreen.enabled = false;
         }
     }
 	
     void OnTriggerExit (Collider other)
     {
-        InventoryScreen.enabled = false;
+        ShopScreen.enabled = false;
     }
 }

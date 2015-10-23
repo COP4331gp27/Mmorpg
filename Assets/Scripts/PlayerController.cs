@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
 	public Camera cam;
 	void Start ()
 	{
-		rb = GetComponent<Rigidbody>();
+        //cam = Instantiate(Resources.Load("Prefabs/MainCamera") as Camera);
+        rb = GetComponent<Rigidbody>();
 	}
 	
 	void FixedUpdate ()
@@ -21,6 +22,6 @@ public class PlayerController : MonoBehaviour
 		movement.Normalize();
 		rb.AddForce (movement * speed);
 		//Show Velocity in Log
-		Debug.Log ("Velocity = "+ rb.velocity.magnitude);
+		//Debug.Log ("Velocity = "+ rb.velocity.magnitude);
 	}
 }
