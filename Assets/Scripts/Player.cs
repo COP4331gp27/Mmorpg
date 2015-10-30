@@ -22,11 +22,12 @@ public class Player : Actor, IExperience{
 	public string playerName;
     public Transform expOrb;
     private Vector3 dropDistance;
-    private InventoryManager myInventory;
+    public InventoryManager myInventory;
     // Use this for initialization
     void Start()
     {
-        myInventory = new InventoryManager(30);
+        myInventory = GameObject.Find("Inventory").GetComponent<InventoryManager>();
+        
         //find all the players in the game
         damage = playerLevel;
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");

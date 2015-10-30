@@ -21,7 +21,7 @@ public class EnemyController : MonoBehaviour {
 			this.rb.velocity = this.rb.velocity.normalized * maxSpeed;
 		}
 
-		Debug.Log ("Moving Towards: " + target.transform.position.ToString ());
+		//Debug.Log ("Moving Towards: " + target.transform.position.ToString ());
 
 	}
 }

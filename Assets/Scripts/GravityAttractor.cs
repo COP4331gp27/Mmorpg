@@ -19,7 +19,7 @@ public class GravityAttractor : MonoBehaviour {
 		Vector3 bodyUp = body.up;
 		Transform t = body.transform;
 		//Rigidbody r = body.GetComponent<Rigidbody>();
-		float shipDistance =(float) Vector3.Distance (transform.position, body.transform.position);
+		//float shipDistance =(float) Vector3.Distance (transform.position, body.transform.position);
 
 		gravityUp = t.position - transform.position;
 		gravityUp.Normalize();
