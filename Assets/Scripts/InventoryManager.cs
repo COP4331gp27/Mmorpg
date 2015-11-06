@@ -22,19 +22,21 @@ public class InventoryManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        invPanel = GameObject.Find("Inventory").GetComponent<Canvas>();
-
+        invPanel = this.transform.GetChild(0).GetChild(0).GetChild(0).GetChild(0).GetComponent<Canvas>();
+        //Debug.Log(invPanel.transform.ToString());
         inventory = new List<ItemData>();
-        
-        itemImageArray = invPanel.transform.GetChild(0).GetChild(0).GetComponentsInChildren<SpritePicker>();
+        //Debug.Log(invPanel.transform.GetChild(0).ToString());
+        itemImageArray = invPanel.transform.GetComponentsInChildren<SpritePicker>();
+        //Debug.Log(itemImageArray[0].transform.ToString());
         int i, max = itemImageArray.Length;
         //itemImageArray[0].printAllSprites();
+        
         for (i = 0; i < max; i++)
         {
-            ///Debug.Log("This is max: " + max);
-
-            Debug.Log(itemImageArray[i].ToString());
-            itemImageArray[i].setSpriteByIndex(i);
+            Debug.Log("This is max: " + max);
+            //SpriteRenderer sprite = itemImageArray[i].transform.GetChild(0).GetComponent<SpriteRenderer>();
+            //Debug.Log("This is sprite: "+sprite.ToString());
+            //sprite.setSpriteByIndex(i);
             inventory.Add(itemImageArray[i].GetComponentInChildren<ItemData>());
         }
 

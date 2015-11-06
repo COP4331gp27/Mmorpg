@@ -15,7 +15,7 @@ public class SpritePicker : MonoBehaviour
     void Start()
     {
         sprites = Resources.LoadAll<Sprite>("Sprites/WeaponSprites");
-        sr = GetComponent<SpriteRenderer>();
+        sr = GetComponentInChildren<SpriteRenderer>();
         names = new string[sprites.Length];
 
         for (int i = 0; i < names.Length; i++)
