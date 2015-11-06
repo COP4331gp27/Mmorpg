@@ -5,7 +5,7 @@ using System;
 
 public class Enemy : MonoBehaviour, IDamagable<int>, IKillable<int>, IExperience {
     private int damage;
-    public int health;
+    private int health;
     public int level;
     private Player player;
     private Vector3 itemDropDistance;
