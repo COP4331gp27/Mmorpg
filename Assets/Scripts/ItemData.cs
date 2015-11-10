@@ -25,4 +25,8 @@ public class ItemData : MonoBehaviour{
 	void Update () {
 	
 	}
+    public string getSubType()
+    {
+        return subType;
+    }
 }

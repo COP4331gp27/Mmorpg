@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 838b1359152cef3499d37be07c5688bd
-timeCreated: 1445556040
+timeCreated: 1446163063
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -114,7 +114,7 @@ TextureImporter:
     21300214: The Cloud Blade
     21300216: Short Sword+
     21300218: Short Sword
-    21300220: Sword
+    21300220: PlayerSword
     21300222: Mace+
     21300224: Warhammer+
     21300226: Fistula
@@ -213,7 +213,7 @@ TextureImporter:
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -896,7 +896,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Sword
+    - name: PlayerSword
       rect:
         serializedVersion: 2
         x: 173

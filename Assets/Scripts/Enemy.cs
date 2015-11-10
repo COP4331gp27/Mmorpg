@@ -74,7 +74,10 @@ public class Enemy : MonoBehaviour, IDamagable<int>, IKillable<int>, IExperience
     {
         
     }
-
+    public int getHealth()
+    {
+        return health;
+    }
     public void gainLevel(int level)
     {
        //implement this for boss monsters. A world boss gaining levels would be cool
