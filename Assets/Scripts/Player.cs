@@ -26,7 +26,7 @@ public class Player : Actor, IExperience{
     // Use this for initialization
     void Start()
     {
-        myInventory = GameObject.Find("Inventory").GetComponent<InventoryManager>();
+        myInventory = this.GetComponent<InventoryManager>();
         
         //find all the players in the game
         damage = playerLevel;
@@ -57,7 +57,7 @@ public class Player : Actor, IExperience{
 
     public void dropExp(int orbs)
     {
-        //expOrb.gameObject.SetActive(true);
+        expOrb.gameObject.SetActive(true);
         for (int i = 0; i < playerLevel*10; i++)
         {
             dropDistance = new Vector3(Random.Range(-2.0f, 2.0f), 0, Random.Range(-2.0f, 2.0f));

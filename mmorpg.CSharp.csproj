@@ -85,6 +85,7 @@
     <Compile Include="Assets\Scripts\CameraFollowPlayer.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\EnemyMove.cs" />
     <Compile Include="Assets\Scripts\Experience.cs" />
     <Compile Include="Assets\Scripts\FollowCamera.cs" />
@@ -108,6 +109,7 @@
     <Compile Include="Assets\Scripts\Not Mine\PlayerGravityBody.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\SpawningBehavior.cs" />
     <Compile Include="Assets\Scripts\SpritePicker.cs" />
     <Compile Include="Assets\Scripts\Sword.cs" />
     <Compile Include="Assets\Scripts\Terrain.cs" />

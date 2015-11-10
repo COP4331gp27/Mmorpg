@@ -7,14 +7,15 @@ public class SpritePicker : MonoBehaviour
 {
 
     public string sheetname;
-    private Sprite[] sprites;
+    public Sprite[] sprites;
     private SpriteRenderer sr;
     private Sprite sprite;
     private string[] names;
 
-    void Start()
+    void Awake()
     {
-        sprites = Resources.LoadAll<Sprite>("Sprites/WeaponSprites");
+        //sprites = Resources.LoadAll<Sprite>("Sprites/WeaponSprites.png");
+        
         sr = GetComponentInChildren<SpriteRenderer>();
         names = new string[sprites.Length];
 
@@ -22,6 +23,7 @@ public class SpritePicker : MonoBehaviour
         {
             names[i] = sprites[i].name;
         }
+        //printAllSprites();
     }
 
     public void ChangeSprite(int index)
@@ -43,15 +45,19 @@ public class SpritePicker : MonoBehaviour
     }
     public void setSpriteByName(string name)
     {
-        SpriteRenderer item = this.GetComponentInChildren<SpriteRenderer>();
-        Debug.Log("Printing item type: "+ item.GetType());
-        item.sprite = sprites[Array.IndexOf(names, name)];
+        //SpriteRenderer item = this.GetComponentInChildren<SpriteRenderer>();
+        Debug.Log("Printing item type: "+ sr.GetType());
+        sr.sprite = sprites[Array.IndexOf(names, name)];
     }
     public void setSpriteByIndex(int index)
     {
-        SpriteRenderer item = this.GetComponentInChildren<SpriteRenderer>();
-        Debug.Log("Printing item type: "+item.GetType());
-        item.sprite = sprites[index];
+        //Debug.Log("Index: " + index+" Sprite name: "+sprites[index+1].ToString());
+        //Debug.Log("Sprite is located in: " + this.transform.ToString());
+        //Debug.Log("Printing item type: "+sr.GetType());
+        //Debug.Log("Name of " + index + " sprite is: " + sprites[index].ToString());
+        //sprite = sprites[index];
+        this.GetComponentInChildren<SpriteRenderer>().sprite = sprites[index];
+        //Debug.Log("Random sprite: " + sprites[32]);
     }
     public void printAllSprites()
     {
