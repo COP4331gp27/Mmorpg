@@ -6,9 +6,7 @@ public class EnemyHealth : MonoBehaviour
 {
     public float max_Health = 100f;
     public float cur_Health = 0f;
-    public GameObject healthBar;
-    public GameObject healthBackground;
-    public GameObject healthBorder;
+    public GameObject healthBar;    
     public Transform EnemyHPCanvas;  
     private Transform theEnemy;
     private Enemy HPscript;
