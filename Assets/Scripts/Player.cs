@@ -15,7 +15,7 @@ public class Player : Actor, IExperience{
 	 * */
     
     private float experience;
-    private int playerLevel = 1;
+    private int playerLevel = 0;
     public int playerHealth = 100;
     private int damage;
     private ArrayList otherPlayers = new ArrayList();
@@ -83,10 +83,21 @@ public class Player : Actor, IExperience{
     {
         return damage;
     }
+    
+    public int getHealth()
+    {
+        return playerHealth;
+    }
+
+    public float getExp()
+    {
+        return experience;
+    }
 
     public void gainLevel(int level)
     {
         Debug.Log("Level up!");
+        playerLevel += 1;
     }
 
     public override void Kill(int Health){

@@ -5,8 +5,9 @@ public class PlayerController : MonoBehaviour
 {
 	public float speed = 250.0f;
 	public float jumpForce;
-	private Rigidbody rb;
+	public Rigidbody rb;
 	public Camera cam;
+
 	void Start ()
 	{
         //cam = Instantiate(Resources.Load("Prefabs/MainCamera") as Camera);
@@ -24,4 +25,9 @@ public class PlayerController : MonoBehaviour
 		//Show Velocity in Log
 		//Debug.Log ("Velocity = "+ rb.velocity.magnitude);
 	}
+
+    /*public float getSpeed ()
+    {
+        return rb.velocity.magnitude;
+    }*/
 }
