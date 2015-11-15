@@ -74,6 +74,6 @@ public class InventoryManager : MonoBehaviour {
 
     public void add(ItemData item)
     {
-
+        inventory.Add(item);
     }
 }

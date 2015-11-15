@@ -13,11 +13,15 @@ public class EnemyHealth : MonoBehaviour
     public GameObject MainCamera; 
     private Vector3 enemyHPoffset;
     private float offsetY = 2.3f;
+    private GameStateManager GSM;
+    private bool cameraSet = false;
     
 
     void Start ()
     {
-        MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        GSM = FindObjectOfType<GameStateManager>();
+        
+        
         //GameObject player = GameObject.FindWithTag("Player");
         //Debug.Log(player.tag);
         //MainCamera =  player[0].GetComponent<Camera>();
@@ -32,17 +36,20 @@ public class EnemyHealth : MonoBehaviour
 
 	void Update ()
     {
-        //if (!GameObject.FindGameObjectWithTag("MainCamera").Equals(null))
-        //{
-        //    MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
-        //}
-        //if (MainCamera.Equals(null))
-        //{
-        //    Debug.Log("Camera is null!");
-        //}
-        //Debug.Log("Camera is NOT null!");
+        if(GSM.getGameState() == "Players Spawned" && (!MainCamera))
+        {
+            //Debug.Log("SETTING CAMERA");
+            MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+            cameraSet = true;
+            //Debug.Log("CAMERA SET");
+            
+        }
+        
         EnemyHPCanvas.position = theEnemy.position + enemyHPoffset;
-        EnemyHPCanvas.LookAt(MainCamera.transform);
+        if (cameraSet)
+        {
+            EnemyHPCanvas.LookAt(MainCamera.transform);
+        }
         cur_Health = HPscript.getHealth();
         float calc_Health = cur_Health / max_Health;
         setHealthBar(calc_Health);

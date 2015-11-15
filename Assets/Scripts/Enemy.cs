@@ -9,12 +9,16 @@ public class Enemy : MonoBehaviour, IDamagable<int>, IKillable<int>, IExperience
     public int level;
     private Player player;
     private Vector3 itemDropDistance;
+    private GameObject[] myOrbs;
+    
     
 	// Use this for initialization
 	void Start () {
+        
         health = level * 100;
         damage = level+10;
-	}
+        dropExp(level);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -50,7 +54,8 @@ public class Enemy : MonoBehaviour, IDamagable<int>, IKillable<int>, IExperience
     {
         if(Health <= 0)
         {
-            dropExp(level);
+            //dropExp(level);
+            activateEXP();
             Destroy(this.gameObject);
         }
     }
@@ -59,13 +64,31 @@ public class Enemy : MonoBehaviour, IDamagable<int>, IKillable<int>, IExperience
     {
 
         GameObject expOrb = Instantiate(Resources.Load("Prefabs/EXP") as GameObject);
+        expOrb.SetActive(false);
+        myOrbs = new GameObject[10];
         //expOrb.SetActive(true);
         Experience actualEXP = expOrb.GetComponent<Experience>();
         actualEXP.setExp(level);
-        for (int i = 0; i < level * 10; i++)
+        for (int i = 0; i < 10; i++)
         {
             itemDropDistance = new Vector3(UnityEngine.Random.Range(-2.0f, 2.0f), 4, UnityEngine.Random.Range(-2.0f, 2.0f));
-            Instantiate(expOrb, transform.position + itemDropDistance, Quaternion.FromToRotation(transform.position, itemDropDistance));
+            myOrbs[i] = (GameObject)Instantiate(expOrb, transform.position + itemDropDistance, Quaternion.FromToRotation(transform.position, itemDropDistance));
+            myOrbs[i].transform.SetParent(transform);
+            myOrbs[i].SetActive(false);
+        }
+    }
+
+    public void activateEXP()
+    {
+        itemDropDistance = new Vector3(UnityEngine.Random.Range(-2.0f, 2.0f), 4, UnityEngine.Random.Range(-2.0f, 2.0f));
+        for (int i=0; i<myOrbs.Length; i++)
+        {
+            transform.DetachChildren();
+            
+            myOrbs[i].SetActive(true);
+            myOrbs[i].GetComponent<Rigidbody>().AddExplosionForce(1000.0f, new Vector3(UnityEngine.Random.Range(-2.0f, 2.0f), 4, UnityEngine.Random.Range(-2.0f, 2.0f)), 3.0f);
+            
+            //myOrbs[i].GetComponent<Rigidbody>().AddExplosionForce(10000.0f, Vector3.up, 50.0f);
 
         }
     }
