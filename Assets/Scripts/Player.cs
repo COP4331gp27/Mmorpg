@@ -24,10 +24,11 @@ public class Player : Actor, IExperience{
     private Vector3 dropDistance;
     public InventoryManager myInventory;
     // Use this for initialization
-    void Awake()
-    {
-        this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
-    }
+    //void Awake()
+    //{
+    //    this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+    //    this.GetComponent<PlayerController>().enabled = true;
+    //}
     void Start()
     {
         myInventory = this.GetComponent<InventoryManager>();

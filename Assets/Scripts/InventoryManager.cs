@@ -23,7 +23,7 @@ public class InventoryManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-        invPanel = this.transform.GetChild(0).GetChild(0).GetChild(0).GetChild(0).GetComponent<Canvas>();
+        //invPanel = this.transform.GetChild(0).GetChild(0).GetChild(0).GetChild(0).GetComponent<Canvas>();
         //Debug.Log(invPanel.transform.ToString());
         inventory = new List<ItemData>();
         //Debug.Log(invPanel.transform.GetChild(0).ToString());
