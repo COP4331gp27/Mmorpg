@@ -26,8 +26,8 @@ public class PlayerController : MonoBehaviour
 		//Debug.Log ("Velocity = "+ rb.velocity.magnitude);
 	}
 
-    /*public float getSpeed ()
+    public float getSpeed ()
     {
         return rb.velocity.magnitude;
-    }*/
+    }
 }
