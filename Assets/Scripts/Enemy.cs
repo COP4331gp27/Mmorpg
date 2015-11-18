@@ -7,21 +7,23 @@ public class Enemy : MonoBehaviour, IDamagable<int>, IKillable<int>, IExperience
     private int damage;
     private int health;
     public int level;
-    private Player player;
+    public Player player;
     private Vector3 itemDropDistance;
     private GameObject[] myOrbs;
-    
+    private EnemyHealth enemyHealthScript;
     
 	// Use this for initialization
-	void Start () {
-        
+	void Start ()
+    {
+        enemyHealthScript = this.GetComponent<EnemyHealth>();
         health = level * 100;
         damage = level+10;
         dropExp(level);
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 	    
 	}
 
@@ -55,6 +57,7 @@ public class Enemy : MonoBehaviour, IDamagable<int>, IKillable<int>, IExperience
         if(Health <= 0)
         {
             //dropExp(level);
+            enemyHealthScript.disableEnemyHPBar();
             activateEXP();
             Destroy(this.gameObject);
         }

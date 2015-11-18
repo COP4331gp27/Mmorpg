@@ -6,9 +6,8 @@ using UnityEngine.Networking;
 using System.Linq;
 //using System;
 
-public class Player : Actor, IExperience{
-	
-    
+public class Player : Actor, IExperience
+{
     /**
 	 * Create this class which all weapons will inherit from
 	 * public Weapon;
@@ -19,7 +18,7 @@ public class Player : Actor, IExperience{
     public int playerHealth = 100;
     private int damage;
     private ArrayList otherPlayers = new ArrayList();
-	public string playerName;
+	private string playerName = "Name";
     public Transform expOrb;
     private Vector3 dropDistance;
     public InventoryManager myInventory;
@@ -75,7 +74,7 @@ public class Player : Actor, IExperience{
     {
         orbs.setExp(this.playerLevel);
         this.experience += orbs.getExp();
-        Debug.Log("Player EXP is now " + experience);
+        //Debug.Log("Player EXP is now " + experience);
         if(this.experience >= 100)
         {
             gainLevel(1);
@@ -101,13 +100,13 @@ public class Player : Actor, IExperience{
 
     public void gainLevel(int level)
     {
-        Debug.Log("Level up!");
         playerLevel += 1;
     }
 
     public override void Kill(int Health){
 		//kill player if health is zero
-		if (Health <= 0) {
+		if (Health <= 0)
+        {
             //play death animation
             dropExp(playerLevel * 10);
             this.gameObject.SetActive(false);
@@ -136,7 +135,7 @@ public class Player : Actor, IExperience{
     }
 	
 
-	string getName(){
+	public string getName(){
 		return playerName;
 	}
 

@@ -2,11 +2,12 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerGUI : MonoBehaviour
 {
     public Transform thePlayer;
-    public GameObject playerHPBar;
-    public GameObject playerExpBar;
+    public GameObject InGame;
+    public Image playerHPBar;
+    public Image playerExpBar;
     public Text playerLevelDisplay;
     public Text SpeedDisplay;
     private Player playerScript;
@@ -15,17 +16,22 @@ public class PlayerHealth : MonoBehaviour
     public float cur_Health = 0f;
     public float max_Exp = 100f;
     public float cur_Exp = 0f;
-    public int level;
-    public float speed;
+    public int level = 0;
+    public float speed = 0f;
 
     // Use this for initialization
     void Start ()
     {
-        thePlayer = thePlayer.GetComponent<Transform>();
+        thePlayer = this.transform;
         playerScript = thePlayer.GetComponent<Player>();
         playerControllerScript = thePlayer.GetComponent<PlayerController>();
-        playerLevelDisplay = playerLevelDisplay.GetComponent<Text>();
-        SpeedDisplay = SpeedDisplay.GetComponent<Text>();
+
+        InGame = GameObject.Find("InGame");
+        playerHPBar = InGame.transform.GetChild(1).GetChild(2).GetComponent<Image>();
+        playerExpBar = InGame.transform.GetChild(2).GetChild(2).GetComponent<Image>();
+        playerLevelDisplay = InGame.transform.GetChild(2).GetChild(4).GetChild(0).GetComponent<Text>();
+        SpeedDisplay = InGame.transform.GetChild(3).GetComponent<Text>();
+
         cur_Health = max_Health;
         cur_Exp = max_Exp;
         level = 0;
@@ -46,8 +52,8 @@ public class PlayerHealth : MonoBehaviour
         level = playerScript.getLevel();
         setPlayerLevel(level);
 
-        //speed = playerControllerScript.getSpeed();
-        //setPlayerSpeed(speed);
+        speed = playerControllerScript.getSpeed();
+        setPlayerSpeed(speed);
     }
 
     void setPlayerHealthBar(float barHP)
