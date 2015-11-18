@@ -16,7 +16,7 @@ public class Sword : MonoBehaviour
     public Transform player;
     void Start()
     {
-
+        
         //player = GetComponentInParent<Transform> ();
         offset = new Vector3(xOffset, yOffset, zOffset);
     }
@@ -49,7 +49,10 @@ public class Sword : MonoBehaviour
         //USING TRIGGERS FOR NON-COMBAT
         if (other.tag == "Player" && other.GetComponent<InventoryManager>().findSpecificItem("PlayerSword") == false)
         {
+            
             ItemData swordItem = this.GetComponent<ItemData>();
+            swordItem.damage = damage;
+            
             //need to figure this out without using Find. It's expensive
             //Transform temp = other.transform.GetChild(1);
             //foreach (GameObject child in temp)

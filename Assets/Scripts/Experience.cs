@@ -32,7 +32,7 @@ public class Experience : MonoBehaviour{
         {
             Player p = c.GetComponent<Player>();
             p.gainExp(this);
-            this.gameObject.SetActive(false);
+            Destroy(this.gameObject);
         }
     }
 }
