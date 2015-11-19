@@ -27,12 +27,12 @@ public class NetworkCharacter : Photon.MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (!photonView.isMine)
+        /*if (!photonView.isMine)
         {
             transform.position = Vector3.Lerp(transform.position, otherPosition, Time.deltaTime * 5);
             transform.rotation = Quaternion.Lerp(transform.rotation, otherRotation, Time.deltaTime * 5);
-        }
+			Debug.Log("pos: " + transform.position);
+        }*/
     }
-
     
 }
