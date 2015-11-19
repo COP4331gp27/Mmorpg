@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 	void Start ()
 	{
         //cam = Instantiate(Resources.Load("Prefabs/MainCamera") as Camera);
-        rb = GetComponent<Rigidbody>();
+        rb = this.transform.GetComponent<Rigidbody>();
 	}
 	
 	void FixedUpdate ()

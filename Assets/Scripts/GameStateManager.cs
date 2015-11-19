@@ -41,11 +41,30 @@ public class GameStateManager : MonoBehaviour {
     //}
 
 
+    private static PhotonView ScenePhotonView;
 
-    //Update is called every frame.
-    void Update()
+    void Start()
     {
+        ScenePhotonView = this.GetComponent<PhotonView>();
+    }
 
+    void OnPhotonPlayerConnected(PhotonPlayer player)
+    {
+        Debug.Log("OnPhotonPlayerConnected: " + player);
+
+        // when new players join, we send "who's it" to let them know
+        // only one player will do this: the "master"
+
+        if (PhotonNetwork.isMasterClient)
+        {
+            TagPlayer(player.ID);
+        }
+    }
+
+    public static void TagPlayer(int playerID)
+    {
+        Debug.Log("TagPlayer: " + playerID);
+        ScenePhotonView.RPC("TaggedPlayer", PhotonTargets.All, playerID);
     }
     public void getPlayers()
     {
