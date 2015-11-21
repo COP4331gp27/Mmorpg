@@ -14,7 +14,7 @@ public class Player : Actor, IExperience
 	 * */
     
     private float experience;
-    private int playerLevel = 0;
+    private int playerLevel = 1;
     public int playerHealth = 100;
     private int damage;
     private ArrayList otherPlayers = new ArrayList();

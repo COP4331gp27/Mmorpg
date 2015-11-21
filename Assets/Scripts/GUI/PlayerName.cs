@@ -7,7 +7,7 @@ public class PlayerName : MonoBehaviour
     private string playerName;
     private Text playerNameHolder;
     private GameObject playerNameCanvas;
-    private float offsetY = 1.5f;
+    private float offsetY = 1f;
     private Vector3 playerNameOffset;
     private GameStateManager GSM;
     public GameObject MainCamera;

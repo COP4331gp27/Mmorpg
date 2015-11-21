@@ -29,7 +29,7 @@ public class PlayerGUI : MonoBehaviour
         InGame = GameObject.Find("InGame");
         playerHPBar = InGame.transform.GetChild(1).GetChild(2).GetComponent<Image>();
         playerExpBar = InGame.transform.GetChild(2).GetChild(2).GetComponent<Image>();
-        playerLevelDisplay = InGame.transform.GetChild(2).GetChild(4).GetChild(0).GetComponent<Text>();
+        playerLevelDisplay = InGame.transform.GetChild(2).GetChild(5).GetComponent<Text>();
         SpeedDisplay = InGame.transform.GetChild(3).GetComponent<Text>();
 
         cur_Health = max_Health;
