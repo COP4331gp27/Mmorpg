@@ -27,7 +27,8 @@ public class LogoutTimer : MonoBehaviour
 
 	void Update()
 	{
-		if (timerNum > 0 && LogoutPrompt.enabled) {
+		if (timerNum > 0 && LogoutPrompt.enabled)
+        {
 			timeElapsed += Time.deltaTime;
 
 			if (timeElapsed >= 1.0f) {
@@ -37,9 +38,9 @@ public class LogoutTimer : MonoBehaviour
 				TimerText.text = "" + timerNum;	
 			}
 		} 
-		else 
+		else if(timerNum <= 0 && LogoutPrompt.enabled)
 		{
-
+            Application.LoadLevel(0);
 		}
 	}
 
@@ -48,5 +49,10 @@ public class LogoutTimer : MonoBehaviour
 		timerNum = 10;
         TimerText.text = "" + timerNum;
         timeElapsed = 0.0f;
+    }
+
+    public void NowPressed()
+    {
+        Application.LoadLevel(0);
     }
 }
