@@ -14,6 +14,8 @@ public class LoginScript : MonoBehaviour
     public Button LoginButton;
     public InputField UsernameField;
     public InputField PasswordField;
+	private MessageData msg = new MessageData();
+	//public Client network;
     	
 	void Start ()
     {
@@ -60,13 +62,33 @@ public class LoginScript : MonoBehaviour
 
     public void LoggingIn ()
     {     
-        if ( UsernameField.text == userName && PasswordField.text == password)
+		int win = 0;
+		msg.type = 0;
+		msg.stringData = UsernameField.text + "|" + PasswordField.text;
+
+		Debug.Log ("Sending " + msg.stringData);
+		Client.Send (msg);
+
+
+		Debug.Log("entering LoginCheck");
+		win = Client.LoginCheck();
+
+		if (win == 1) {
+			Application.LoadLevel ("Flast");
+		}
+		/*else 
+		{
+			Application.LoadLevel("LoginScene");
+		}*/
+
+		/*if ( UsernameField.text == userName && PasswordField.text == password)
         {
             Debug.Log("Login Successful");
             Application.LoadLevel("Flast");
         }
         else
             Debug.Log("Login Failed");
-        }
+        }*/
+	}
 }
 

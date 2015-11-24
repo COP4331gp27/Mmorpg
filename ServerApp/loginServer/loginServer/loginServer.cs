@@ -60,6 +60,7 @@ namespace loginServer
 				_byteBuffer.Add(new ArrayList());
 				Console.WriteLine("new connection from " + newSocket.LocalEndPoint.ToString());
 			}
+			readData ();
 		}
 
 		private void readData()
@@ -93,9 +94,9 @@ namespace loginServer
 							buffer.RemoveRange(0, length + 1);
 							byte[] readBytes = (byte[]) thisMsgBytes.ToArray(typeof(byte));
 							MessageData readMsg = MessageData.FromByteArray(readBytes);
-							buffer.Add(readMsg);
+							_buffer.Add(readMsg);
 							Console.WriteLine("message of type {0}: {1} ", readMsg.type, readMsg.stringData);
-							//TODO: ahndle recieved packet
+							HandleReceivedPacket(readMsg, socket);
 
 							if (me != this){
 								Console.WriteLine("This error makes no sense");
@@ -104,6 +105,45 @@ namespace loginServer
 					}
 				}
 			}
+		}
+
+		private void HandleReceivedPacket(MessageData data, Socket Sender)
+		{
+			switch (data.type) 
+			{
+				case 0:
+					Console.WriteLine("this is login request");
+					HandleLoginREquest(Sender, data.stringData);
+					break;
+			}
+		}
+
+		private void HandleLoginREquest(Socket sender, string request)
+		{
+			MessageData response = new MessageData ();
+			response.stringData = "login";
+			string[] elem = request.Split ('|');
+			Console.WriteLine (elem [0] + " " + elem [1]);
+
+			if (elem [0] == "eric" && elem [1] == "homberger") {
+				response.type = 1;
+			}
+			else 
+			{
+				response.type = -1;
+			}
+			Console.WriteLine ("Responding with " + response.type);
+			respond (sender, response);
+		}
+
+		private void respond(Socket sender, MessageData response)
+		{
+			byte[] sendData = MessageData.toByteArray (response);
+			byte[] buffer = new byte[1];
+			buffer [0] = (byte)sendData.Length;
+			sender.Send (buffer);
+			sender.Send (sendData);
+
 		}
 	}
 }
