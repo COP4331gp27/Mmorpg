@@ -184,8 +184,9 @@ public class Player : Actor, IExperience
 	public void giveItem(GameObject pickup)
 	{
 		//equiped = new GameObject ();
-		GameObject temp = PhotonNetwork.Instantiate ("Prefabs/Sword", transform.position, transform.rotation, 0);
+		GameObject temp = PhotonNetwork.Instantiate ("Prefabs/" + pickup.name, transform.position, transform.rotation, 0);
 		equiped = temp;
+		equiped.transform.LookAt (this.transform);
 		myInventory.add (equiped.GetComponent<ItemData>());
 	}
 	
