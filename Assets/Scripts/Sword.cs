@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.Networking;
 
-public class Sword : MonoBehaviour 
+public class Sword : NetworkCharacter
 {
 	
 	private int damage = 10;
@@ -49,10 +49,17 @@ public class Sword : MonoBehaviour
 		transform.rotation = updated.rotation;*/
 	//	}
 	
-	void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+	/*void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
 	{
-		
-	}
+		if (stream.isWriting) {
+			stream.SendNext (transform.position);
+			stream.SendNext (transform.rotation);
+		}
+		else 
+		{
+
+		}
+	}*/
 	
 	public void setWeapon(bool pickedUp)
 	{

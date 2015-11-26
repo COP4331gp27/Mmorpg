@@ -41,6 +41,7 @@ public class Player : Actor, IExperience
 	void Start()
 	{
 		myInventory = this.GetComponent<InventoryManager>();
+		offset = new Vector3(xOffset, yOffset, zOffset);
 		
 		//find all the players in the game
 		damage = playerLevel;
@@ -59,6 +60,7 @@ public class Player : Actor, IExperience
 	{
 		if (equiped != null) 
 		{
+
 			offset = Quaternion.AngleAxis (Input.GetAxis ("Mouse X") * turnSpeed, Vector3.up) * offset;
 			//Causes problems with clipping
 			offset = Quaternion.AngleAxis (Input.GetAxis ("Mouse Y") * turnSpeed, Vector3.right) * offset;
@@ -183,9 +185,9 @@ public class Player : Actor, IExperience
 	
 	public void giveItem(GameObject pickup)
 	{
-		//equiped = new GameObject ();
 		GameObject temp = PhotonNetwork.Instantiate ("Prefabs/" + pickup.name, transform.position, transform.rotation, 0);
 		equiped = temp;
+		equiped.transform.position = this.transform.position + new Vector3 (8f, 8f);
 		equiped.transform.LookAt (this.transform);
 		myInventory.add (equiped.GetComponent<ItemData>());
 	}
