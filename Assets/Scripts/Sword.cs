@@ -20,11 +20,12 @@ public class Sword : MonoBehaviour
         //player = GetComponentInParent<Transform> ();
         offset = new Vector3(xOffset, yOffset, zOffset);
     }
-
+    [PunRPC]
     void LateUpdate()
     {
         //While Holding Left Click Rotate weapon Around  
 		if (!player.Equals (null)) {
+            
 			offset = Quaternion.AngleAxis (Input.GetAxis ("Mouse X") * turnSpeed, Vector3.up) * offset;
 			//Causes problems with clipping
 			offset = Quaternion.AngleAxis (Input.GetAxis ("Mouse Y") * turnSpeed, Vector3.right) * offset;
@@ -43,7 +44,7 @@ public class Sword : MonoBehaviour
     {
         return damage;
     }
-
+    [PunRPC]
     void OnTriggerEnter(Collider other)
     {
         //USING TRIGGERS FOR NON-COMBAT

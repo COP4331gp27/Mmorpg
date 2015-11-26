@@ -57,6 +57,14 @@ public class RandomMatchmaking : Photon.PunBehaviour {
 
     void OnJoinedRoom()
     {
+        if (PhotonNetwork.isMasterClient)
+        {
+            GameObject enemySpawner = GameObject.Find("Enemies");
+
+            GameObject enemy = PhotonNetwork.Instantiate("Prefabs/Enemy", enemySpawner.transform.position, Quaternion.identity, 0);
+            enemy.transform.SetParent(enemySpawner.transform);
+            enemy.SetActive(true);
+        }        
         GameObject player = PhotonNetwork.Instantiate("Prefabs/Player", new Vector3(UnityEngine.Random.Range(500.0f, 510.0f), 505.0f, UnityEngine.Random.Range(15.0f, -5.0f)), Quaternion.identity, 0);
         PlayerController controller = player.GetComponent<PlayerController>();
         controller.enabled = true;
