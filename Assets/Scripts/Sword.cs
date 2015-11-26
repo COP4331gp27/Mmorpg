@@ -11,13 +11,12 @@ public class Sword : MonoBehaviour
     public float yOffset = 0.5f;
     public float xOffset = 0.5f;
     public float turnSpeed = 4.0f;
-    //PhotonView photonView;
 
     private Vector3 offset;
     public Transform player;
     void Start()
     {
-        //photonView = GetComponent<PhotonView>();
+        
         //player = GetComponentInParent<Transform> ();
         offset = new Vector3(xOffset, yOffset, zOffset);
     }
@@ -45,7 +44,7 @@ public class Sword : MonoBehaviour
     {
         return damage;
     }
-    
+    [PunRPC]
     void OnTriggerEnter(Collider other)
     {
         //USING TRIGGERS FOR NON-COMBAT
@@ -64,9 +63,9 @@ public class Sword : MonoBehaviour
             Transform swordTransform = other.transform.GetChild(1).Find("PlayerSword");
             //Transform swordObject = sword.GetComponent<Transform>();
             //Debug.Log("WHAT AM I?!: " + swordTransform.ToString());
-            Player p = other.transform.GetComponent<Player>();
+            Player p = other.GetComponent<Player>();
             p.pickUpItem(swordItem);
-            PlayerSword sword = swordTransform.GetComponent<PlayerSword>();
+            Sword sword = swordTransform.GetComponent<Sword>();
             sword.player = p.GetComponent<Transform>();
             swordTransform.gameObject.SetActive(true);
             
@@ -75,22 +74,20 @@ public class Sword : MonoBehaviour
     }
 
    
-    
-    //void OnCollisionEnter(Collision collision)
-    //{
-    //    if(collision.collider.tag == "Player" && this.playerHas)
-    //    {
-    //        //Debug.Log("WHY AM I IN HERE?!");
-    //        //Player p = collision.collider.GetComponent<Player>();
-    //        //Player owner = this.GetComponent<Player>();
-    //        //p.takeDamage(getDamage()+owner.getDamage());
-    //        int myDamage = GetComponent<Player>().getDamage();
-    //        collision.transform.GetComponent<PhotonView>().RPC("takeDamage", PhotonTargets.All, getDamage() + myDamage);
-    //        //Debug.Log("Damaged player!" + "\tPlayer's Health = " + p.playerHealth);
-    //    }
-    //    else
-    //    {
 
-    //    }
-    //}
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.tag == "Player" && this.playerHas)
+        {
+            Debug.Log("WHY AM I IN HERE?!");
+            Player p = collision.collider.GetComponent<Player>();
+            Player owner = this.GetComponent<Player>();
+            p.takeDamage(getDamage()+owner.getDamage());
+            Debug.Log("Damaged player!" + "\tPlayer's Health = " + p.playerHealth);
+        }
+        else
+        {
+
+        }
+    }
 }
