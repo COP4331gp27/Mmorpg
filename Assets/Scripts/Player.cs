@@ -142,7 +142,7 @@ public class Player : Actor, IExperience
     void OnTriggerStay(Collider other)
     {
         
-        if(other.tag == "Enemy")
+        if(other.CompareTag("Enemy"))
         {
             
             //Debug.Log("Touching the enemy!!");
