@@ -59,7 +59,7 @@ public class Enemy : MonoBehaviour, IDamagable<int>, IKillable<int>, IExperience
             //dropExp(level);
             enemyHealthScript.disableEnemyHPBar();
             activateEXP();
-            Destroy(this.gameObject);
+            PhotonNetwork.Destroy(this.gameObject);
         }
     }
 

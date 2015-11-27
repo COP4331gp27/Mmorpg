@@ -56,7 +56,7 @@ public class NetworkWeapon : MonoBehaviour {
             transform.rotation = Quaternion.Lerp(transform.rotation, otherRotation, Time.deltaTime * 5);
             //transform.position = Vector3.Lerp(transform.position, otherPosition, 0.1f);
             //transform.rotation = Quaternion.Lerp(transform.rotation, otherRotation, 0.1f);
-            Debug.Log("pos: " + transform.position);
+            //Debug.Log("pos: " + transform.position);
         }
     }
 }

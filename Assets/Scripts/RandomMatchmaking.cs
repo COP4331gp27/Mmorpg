@@ -6,12 +6,14 @@ public class RandomMatchmaking : Photon.PunBehaviour {
 
     private const string roomName = "Flast";
     private RoomInfo[] roomsList;
+    private PhotonView myNetworkView;
+    private GameObject player;
 
     // Use this for initialization
     void Start()
     {   
         PhotonNetwork.ConnectUsingSettings("0.1");
-        PhotonNetwork.logLevel = PhotonLogLevel.Full;
+        PhotonNetwork.logLevel = PhotonLogLevel.ErrorsOnly;
     }
 
     void OnGUI()
@@ -54,22 +56,31 @@ public class RandomMatchmaking : Photon.PunBehaviour {
         Debug.Log("Can't join random room!");
         //PhotonNetwork.CreateRoom(null);
     }
-
-    void OnJoinedRoom()
+   
+    public override void OnJoinedRoom()
     {
-        if (PhotonNetwork.isMasterClient)
-        {
-            GameObject enemySpawner = GameObject.Find("Enemies");
+        SpawnPlayer();
+        myNetworkView = player.GetComponent<PhotonView>();
+        
+        //if (PhotonNetwork.isMasterClient)
+        //{
+        //    SpawnEnemy();
+        //}
+        
 
-            GameObject enemy = PhotonNetwork.Instantiate("Prefabs/Enemy", enemySpawner.transform.position, Quaternion.identity, 0);
-            enemy.transform.SetParent(enemySpawner.transform);
-            enemy.SetActive(true);
-        }        
-        GameObject player = PhotonNetwork.Instantiate("Prefabs/Player", new Vector3(UnityEngine.Random.Range(500.0f, 510.0f), 505.0f, UnityEngine.Random.Range(15.0f, -5.0f)), Quaternion.identity, 0);
+        
+        
+    }
+    [PunRPC]
+    void SpawnPlayer()
+    {
+        player = PhotonNetwork.Instantiate("Prefabs/Player", new Vector3(UnityEngine.Random.Range(500.0f, 510.0f), 505.0f, UnityEngine.Random.Range(15.0f, -5.0f)), Quaternion.identity, 0);
         PlayerController controller = player.GetComponent<PlayerController>();
         controller.enabled = true;
         Camera mainCamera = player.GetComponentInChildren<Camera>();
         mainCamera.enabled = true;
     }
+
+    
 
 }
