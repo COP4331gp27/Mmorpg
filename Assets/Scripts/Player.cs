@@ -22,6 +22,7 @@ public class Player : Actor, IExperience
     public Transform expOrb;
     private Vector3 dropDistance;
     public InventoryManager myInventory;
+    public PhotonView pv;
     // Use this for initialization
     //void Awake()
     //{
@@ -30,6 +31,8 @@ public class Player : Actor, IExperience
     //}
     void Start()
     {
+        pv = PhotonView.Get(this);
+
         myInventory = this.GetComponent<InventoryManager>();
         
         //find all the players in the game
@@ -107,7 +110,7 @@ public class Player : Actor, IExperience
     public override void Kill(int Health)
     {
 		//kill player if health is zero
-		if (Health <= 0)
+		if (Health <= 0 && pv.isMine)
         {
             //play death animation
             dropExp(playerLevel * 10);

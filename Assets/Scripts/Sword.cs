@@ -54,15 +54,16 @@ public class Sword : MonoBehaviour
         return damage;
     }
 
+    
     void OnCollisionEnter(Collision collision)
     {
         if(collision.collider.tag == "Player")
         {
             Debug.Log("WHY AM I IN HERE?!");
-            Player p = collision.collider.GetComponent<Player>();
+            PhotonView p = collision.collider.GetComponent<PhotonView>();
             Player owner = this.GetComponent<Player>();
-            p.takeDamage(getDamage()+owner.getDamage());
-            Debug.Log("Damaged player!" + "\tPlayer's Health = " + p.playerHealth);
+            p.RPC("takeDamage", PhotonTargets.All, 10);
+            //Debug.Log("Damaged player!" + "\tPlayer's Health = " + p.playerHealth);
         }
         else
         {
