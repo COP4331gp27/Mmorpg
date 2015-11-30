@@ -61,7 +61,11 @@ public class RandomMatchmaking : Photon.PunBehaviour {
     {
         SpawnPlayer();
         myNetworkView = player.GetComponent<PhotonView>();
-        
+		GameObject enemies = GameObject.Find ("Enemies");
+		if (PhotonNetwork.isMasterClient) {
+			enemies.SetActive(true);
+
+		}
         //if (PhotonNetwork.isMasterClient)
         //{
         //    SpawnEnemy();
