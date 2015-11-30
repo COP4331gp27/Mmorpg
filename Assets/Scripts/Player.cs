@@ -114,6 +114,8 @@ public class Player : Actor, IExperience
             
 		}
 	}
+
+    [PunRPC]
 	public override void takeDamage(int damageTaken){
 		playerHealth -= damageTaken;	
 	}
