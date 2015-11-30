@@ -35,7 +35,8 @@ public class EnemyHealth : MonoBehaviour
             MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         }
         
-        EnemyHPCanvas.transform.position = theEnemy.position + enemyHPoffset;
+        //EnemyHPCanvas.transform.position = this.transform.position + enemyHPoffset;
+        EnemyHPCanvas.transform.position = Vector3.Lerp(this.transform.position, (this.transform.position + enemyHPoffset), 1.0f);
 
         if (!MainCamera.Equals(null) && !EnemyHPCanvas.Equals(null))
         {

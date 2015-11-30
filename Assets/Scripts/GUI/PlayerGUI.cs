@@ -18,10 +18,12 @@ public class PlayerGUI : MonoBehaviour
     public float cur_Exp = 0f;
     public int level = 0;
     public float speed = 0f;
+    public PhotonView pv;
 
     // Use this for initialization
     void Start ()
     {
+        pv = PhotonView.Get(this);
         thePlayer = this.transform;
         playerScript = thePlayer.GetComponent<Player>();
         playerControllerScript = thePlayer.GetComponent<PlayerController>();
@@ -41,19 +43,22 @@ public class PlayerGUI : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        cur_Health = playerScript.getHealth();
-        float calc_Health = cur_Health / max_Health;
-        setPlayerHealthBar(calc_Health);
+        if (pv.isMine)
+        {
+            cur_Health = playerScript.getHealth();
+            float calc_Health = cur_Health / max_Health;
+            setPlayerHealthBar(calc_Health);
 
-        cur_Exp = playerScript.getExp();
-        float calc_Exp = cur_Exp / max_Exp;
-        setPlayerExpBar(calc_Exp);
+            cur_Exp = playerScript.getExp();
+            float calc_Exp = cur_Exp / max_Exp;
+            setPlayerExpBar(calc_Exp);
 
-        level = playerScript.getLevel();
-        setPlayerLevel(level);
+            level = playerScript.getLevel();
+            setPlayerLevel(level);
 
-        speed = playerControllerScript.getSpeed();
-        setPlayerSpeed(speed);
+            speed = playerControllerScript.getSpeed();
+            setPlayerSpeed(speed);
+        }
     }
 
     void setPlayerHealthBar(float barHP)

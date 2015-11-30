@@ -36,7 +36,8 @@ public class PlayerName : MonoBehaviour
             playerNameCanvas.transform.rotation = Quaternion.LookRotation(transform.position - MainCamera.transform.position);
         }
 
-        playerNameCanvas.transform.position = this.transform.position + playerNameOffset;
+        //playerNameCanvas.transform.position = this.transform.position + playerNameOffset;
+        playerNameCanvas.transform.position = Vector3.Lerp(this.transform.position, (this.transform.position + playerNameOffset), 1.0f);
     }
 
     void setPlayerName()

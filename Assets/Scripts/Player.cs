@@ -103,21 +103,25 @@ public class Player : Actor, IExperience
         playerLevel += 1;
     }
 
-    public override void Kill(int Health){
+    [PunRPC]
+    public override void Kill(int Health)
+    {
 		//kill player if health is zero
 		if (Health <= 0)
         {
             //play death animation
             dropExp(playerLevel * 10);
-            this.gameObject.SetActive(false);
+            PhotonNetwork.Disconnect();
 			Debug.Log("Player Killed");
             
 		}
 	}
 
     [PunRPC]
-	public override void takeDamage(int damageTaken){
-		playerHealth -= damageTaken;	
+	public override void takeDamage(int damageTaken)
+    {
+		playerHealth -= damageTaken;
+        Kill(playerHealth);
 	}
 
 	public override void pickUpItem(ItemData item){
