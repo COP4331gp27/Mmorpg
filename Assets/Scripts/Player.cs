@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using AssemblyCSharp;
@@ -43,7 +43,10 @@ public class Player : Actor, IExperience
         }
         
     }
-
+	void OnJoinedRoom()
+	{
+		PhotonNetwork.LoadLevel (PhotonNetwork.room.ToString());
+	}
     // Update is called once per frame
     void Update()
     {
@@ -114,6 +117,7 @@ public class Player : Actor, IExperience
             
 		}
 	}
+	[PunRPC]
 	public override void takeDamage(int damageTaken){
 		playerHealth -= damageTaken;	
 	}
