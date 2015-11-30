@@ -64,7 +64,7 @@ public class GameStateManager : MonoBehaviour {
     public static void TagPlayer(int playerID)
     {
         Debug.Log("TagPlayer: " + playerID);
-        ScenePhotonView.RPC("TaggedPlayer", PhotonTargets.All, playerID);
+       // ScenePhotonView.RPC("TaggedPlayer", PhotonTargets.All, playerID);
     }
     public void getPlayers()
     {

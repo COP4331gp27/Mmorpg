@@ -4,7 +4,7 @@ using UnityEngine.Networking;
 
 public class Sword : MonoBehaviour 
 {
-
+    private GameObject importedCamera;
     private int damage = 10;
     private bool playerHas = false;
     public float zOffset = 1.0f;
@@ -16,24 +16,33 @@ public class Sword : MonoBehaviour
     public Transform player;
     void Start()
     {
-        
-        //player = GetComponentInParent<Transform> ();
+        //player = GetComponentInParent<Transform> ();     
+
+        //This is getting camera attached to player who owns this sword
+        importedCamera = this.transform.parent.parent.transform.GetChild(0).gameObject; 
         offset = new Vector3(xOffset, yOffset, zOffset);
     }
     [PunRPC]
     void LateUpdate()
     {
-        //While Holding Left Click Rotate weapon Around  
-		if (!player.Equals (null)) {
-            
-			offset = Quaternion.AngleAxis (Input.GetAxis ("Mouse X") * turnSpeed, Vector3.up) * offset;
-			//Causes problems with clipping
-			offset = Quaternion.AngleAxis (Input.GetAxis ("Mouse Y") * turnSpeed, Vector3.right) * offset;
+		if (!player.Equals (null))
+        {
+           /// if ()
+            //{
+            //}
+           // else
+                offset = Quaternion.AngleAxis (Input.GetAxis ("Mouse X") * turnSpeed, Vector3.up) * offset;
+
+			//if()
+           // {
+
+            //}
+          //  else
+			    offset = Quaternion.AngleAxis (Input.GetAxis ("Mouse Y") * turnSpeed, Vector3.right) * offset;
 			transform.forward = player.forward;
 			transform.position = player.position + offset;
 			transform.LookAt (player.position);
 		}
-
     }
     public void setWeapon(bool pickedUp)
     {
@@ -44,46 +53,17 @@ public class Sword : MonoBehaviour
     {
         return damage;
     }
-    [PunRPC]
-    void OnTriggerEnter(Collider other)
-    {
-        //USING TRIGGERS FOR NON-COMBAT
-        if (other.tag == "Player" && other.GetComponent<InventoryManager>().findSpecificItem("PlayerSword") == false)
-        {
-            
-            ItemData swordItem = this.GetComponent<ItemData>();
-            swordItem.damage = damage;
-            
-            //need to figure this out without using Find. It's expensive
-            //Transform temp = other.transform.GetChild(1);
-            //foreach (GameObject child in temp)
-            //{
-            //    if (child.ToString()
-            //}
-            Transform swordTransform = other.transform.GetChild(1).Find("PlayerSword");
-            //Transform swordObject = sword.GetComponent<Transform>();
-            //Debug.Log("WHAT AM I?!: " + swordTransform.ToString());
-            Player p = other.GetComponent<Player>();
-            p.pickUpItem(swordItem);
-            Sword sword = swordTransform.GetComponent<Sword>();
-            sword.player = p.GetComponent<Transform>();
-            swordTransform.gameObject.SetActive(true);
-            
-            
-        }
-    }
 
-   
-
+    
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.tag == "Player" && this.playerHas)
+        if(collision.collider.tag == "Player")
         {
             Debug.Log("WHY AM I IN HERE?!");
-            Player p = collision.collider.GetComponent<Player>();
+            PhotonView p = collision.collider.GetComponent<PhotonView>();
             Player owner = this.GetComponent<Player>();
-            p.takeDamage(getDamage()+owner.getDamage());
-            Debug.Log("Damaged player!" + "\tPlayer's Health = " + p.playerHealth);
+            p.RPC("takeDamage", PhotonTargets.All, 10);
+            //Debug.Log("Damaged player!" + "\tPlayer's Health = " + p.playerHealth);
         }
         else
         {

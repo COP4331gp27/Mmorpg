@@ -35,7 +35,8 @@ public class EnemyHealth : MonoBehaviour
             MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         }
         
-        EnemyHPCanvas.transform.position = theEnemy.position + enemyHPoffset;
+        //EnemyHPCanvas.transform.position = this.transform.position + enemyHPoffset;
+        EnemyHPCanvas.transform.position = Vector3.Lerp(this.transform.position, (this.transform.position + enemyHPoffset), 1.0f);
 
         if (!MainCamera.Equals(null) && !EnemyHPCanvas.Equals(null))
         {
@@ -51,6 +52,7 @@ public class EnemyHealth : MonoBehaviour
         healthBar.transform.localScale = new Vector3(Mathf.Clamp(barHP,0f,1f), healthBar.transform.localScale.y, healthBar.transform.localScale.z);
     }
 
+	[PunRPC]
     public void disableEnemyHPBar()
     {
         healthBar.transform.localScale = new Vector3(0f, healthBar.transform.localScale.y, healthBar.transform.localScale.z);

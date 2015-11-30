@@ -14,7 +14,7 @@ public class Player : Actor, IExperience
 	 * */
     
     private float experience;
-    private int playerLevel = 0;
+    private int playerLevel = 1;
     public int playerHealth = 100;
     private int damage;
     private ArrayList otherPlayers = new ArrayList();
@@ -22,6 +22,7 @@ public class Player : Actor, IExperience
     public Transform expOrb;
     private Vector3 dropDistance;
     public InventoryManager myInventory;
+    public PhotonView pv;
     // Use this for initialization
     //void Awake()
     //{
@@ -30,18 +31,20 @@ public class Player : Actor, IExperience
     //}
     void Start()
     {
+        pv = PhotonView.Get(this);
+
         myInventory = this.GetComponent<InventoryManager>();
         
         //find all the players in the game
         damage = playerLevel;
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        //GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         playerHealth += (playerLevel * 10);
         //populate an arraylist of these player's names
-        foreach (GameObject p in players)
-        {
-            otherPlayers.Add(p.GetComponent<Player>().getName());
-        }
-        
+        //foreach (gameobject p in players)
+        //{
+        //    otherplayers.add(p.getcomponent<player>().getname());
+        //}
+
     }
 
     // Update is called once per frame
@@ -103,19 +106,30 @@ public class Player : Actor, IExperience
         playerLevel += 1;
     }
 
-    public override void Kill(int Health){
-		//kill player if health is zero
-		if (Health <= 0)
+    [PunRPC]
+    public override void Kill(int Health)
+    {
+        //kill player if health is zero
+        if (Health <= 0 && pv.isMine)
         {
             //play death animation
             dropExp(playerLevel * 10);
-            this.gameObject.SetActive(false);
-			Debug.Log("Player Killed");
-            
-		}
-	}
-	public override void takeDamage(int damageTaken){
-		playerHealth -= damageTaken;	
+            if (PhotonNetwork.connected)
+            {
+				this.GetComponent<PlayerName>().disablePlayername();
+                PhotonNetwork.Disconnect();
+            }
+            Debug.Log("Player Killed");
+            Application.LoadLevel("Flast");
+
+        }
+    }
+
+    [PunRPC]
+	public override void takeDamage(int damageTaken)
+    {
+		playerHealth -= damageTaken;
+        Kill(playerHealth);
 	}
 
 	public override void pickUpItem(ItemData item){
@@ -142,7 +156,7 @@ public class Player : Actor, IExperience
     void OnTriggerStay(Collider other)
     {
         
-        if(other.CompareTag("Enemy"))
+        if(other.tag == "Enemy")
         {
             
             //Debug.Log("Touching the enemy!!");

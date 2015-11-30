@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
         rb = this.transform.GetComponent<Rigidbody>();
 	}
 	
-	void FixedUpdate ()
+	void Update ()
 	{
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
@@ -22,9 +22,14 @@ public class PlayerController : MonoBehaviour
 		movement =cam.transform.TransformDirection(movement);
 		movement.Normalize();
 		rb.AddForce (movement * speed);
-		//Show Velocity in Log
-		//Debug.Log ("Velocity = "+ rb.velocity.magnitude);
-	}
+        //Show Velocity in Log
+        //Debug.Log ("Velocity = "+ rb.velocity.magnitude);
+
+        if (!(Input.anyKey) && (rb.velocity.magnitude <= 0.43f))
+        {
+            rb.Sleep();
+        }
+    }
 
     public float getSpeed ()
     {

@@ -7,7 +7,7 @@ public class PlayerName : MonoBehaviour
     private string playerName;
     private Text playerNameHolder;
     private GameObject playerNameCanvas;
-    private float offsetY = 1.5f;
+    private float offsetY = 1f;
     private Vector3 playerNameOffset;
     private GameStateManager GSM;
     public GameObject MainCamera;
@@ -36,11 +36,17 @@ public class PlayerName : MonoBehaviour
             playerNameCanvas.transform.rotation = Quaternion.LookRotation(transform.position - MainCamera.transform.position);
         }
 
-        playerNameCanvas.transform.position = this.transform.position + playerNameOffset;
+        //playerNameCanvas.transform.position = this.transform.position + playerNameOffset;
+        playerNameCanvas.transform.position = Vector3.Lerp(this.transform.position, (this.transform.position + playerNameOffset), 1.0f);
     }
 
     void setPlayerName()
     {
          playerNameHolder.text = "" + playerName;
     }
+
+	public void disablePlayername()
+	{
+		Destroy(playerNameCanvas);
+	}
 }
