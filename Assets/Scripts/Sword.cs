@@ -77,7 +77,7 @@ public class Sword : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.tag == "Player" && this.playerHas)
+        if(collision.collider.tag == "Player")
         {
             Debug.Log("WHY AM I IN HERE?!");
             Player p = collision.collider.GetComponent<Player>();
