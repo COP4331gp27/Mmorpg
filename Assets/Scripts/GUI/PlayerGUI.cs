@@ -18,12 +18,10 @@ public class PlayerGUI : MonoBehaviour
     public float cur_Exp = 0f;
     public int level = 0;
     public float speed = 0f;
-	public PhotonView pv;
 
     // Use this for initialization
     void Start ()
     {
-		pv = PhotonView.Get (this);
         thePlayer = this.transform;
         playerScript = thePlayer.GetComponent<Player>();
         playerControllerScript = thePlayer.GetComponent<PlayerController>();
@@ -31,7 +29,7 @@ public class PlayerGUI : MonoBehaviour
         InGame = GameObject.Find("InGame");
         playerHPBar = InGame.transform.GetChild(1).GetChild(2).GetComponent<Image>();
         playerExpBar = InGame.transform.GetChild(2).GetChild(2).GetComponent<Image>();
-        playerLevelDisplay = InGame.transform.GetChild(2).GetChild(4).GetChild(0).GetComponent<Text>();
+        playerLevelDisplay = InGame.transform.GetChild(2).GetChild(5).GetComponent<Text>();
         SpeedDisplay = InGame.transform.GetChild(3).GetComponent<Text>();
 
         cur_Health = max_Health;
@@ -43,22 +41,21 @@ public class PlayerGUI : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-		if (pv.isMine) {
-			cur_Health = playerScript.getHealth ();
-			float calc_Health = cur_Health / max_Health;
-			setPlayerHealthBar(calc_Health);
+        cur_Health = playerScript.getHealth();
+        float calc_Health = cur_Health / max_Health;
+        setPlayerHealthBar(calc_Health);
 
-			cur_Exp = playerScript.getExp ();
-			float calc_Exp = cur_Exp / max_Exp;
-			setPlayerExpBar (calc_Exp);
+        cur_Exp = playerScript.getExp();
+        float calc_Exp = cur_Exp / max_Exp;
+        setPlayerExpBar(calc_Exp);
 
-			level = playerScript.getLevel ();
-			setPlayerLevel (level);
+        level = playerScript.getLevel();
+        setPlayerLevel(level);
 
-			speed = playerControllerScript.getSpeed ();
-			setPlayerSpeed (speed);
-		}
+        speed = playerControllerScript.getSpeed();
+        setPlayerSpeed(speed);
     }
+
     void setPlayerHealthBar(float barHP)
     {
         playerHPBar.transform.localScale = new Vector3(Mathf.Clamp(barHP, 0f, 1f), playerHPBar.transform.localScale.y, playerHPBar.transform.localScale.z);

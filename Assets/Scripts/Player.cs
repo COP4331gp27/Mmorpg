@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using AssemblyCSharp;
@@ -14,7 +14,7 @@ public class Player : Actor, IExperience
 	 * */
     
     private float experience;
-    private int playerLevel = 0;
+    private int playerLevel = 1;
     public int playerHealth = 100;
     private int damage;
     private ArrayList otherPlayers = new ArrayList();
@@ -43,10 +43,7 @@ public class Player : Actor, IExperience
         }
         
     }
-	void OnJoinedRoom()
-	{
-		PhotonNetwork.LoadLevel (PhotonNetwork.room.ToString());
-	}
+
     // Update is called once per frame
     void Update()
     {
@@ -117,7 +114,6 @@ public class Player : Actor, IExperience
             
 		}
 	}
-	[PunRPC]
 	public override void takeDamage(int damageTaken){
 		playerHealth -= damageTaken;	
 	}
@@ -146,7 +142,7 @@ public class Player : Actor, IExperience
     void OnTriggerStay(Collider other)
     {
         
-        if(other.CompareTag("Enemy"))
+        if(other.tag == "Enemy")
         {
             
             //Debug.Log("Touching the enemy!!");
