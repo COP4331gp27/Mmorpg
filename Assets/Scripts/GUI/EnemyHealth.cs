@@ -52,6 +52,7 @@ public class EnemyHealth : MonoBehaviour
         healthBar.transform.localScale = new Vector3(Mathf.Clamp(barHP,0f,1f), healthBar.transform.localScale.y, healthBar.transform.localScale.z);
     }
 
+	[PunRPC]
     public void disableEnemyHPBar()
     {
         healthBar.transform.localScale = new Vector3(0f, healthBar.transform.localScale.y, healthBar.transform.localScale.z);

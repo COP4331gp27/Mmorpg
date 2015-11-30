@@ -37,14 +37,14 @@ public class Player : Actor, IExperience
         
         //find all the players in the game
         damage = playerLevel;
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        //GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         playerHealth += (playerLevel * 10);
         //populate an arraylist of these player's names
-        foreach (GameObject p in players)
-        {
-            otherPlayers.Add(p.GetComponent<Player>().getName());
-        }
-        
+        //foreach (gameobject p in players)
+        //{
+        //    otherplayers.add(p.getcomponent<player>().getname());
+        //}
+
     }
 
     // Update is called once per frame
@@ -109,16 +109,21 @@ public class Player : Actor, IExperience
     [PunRPC]
     public override void Kill(int Health)
     {
-		//kill player if health is zero
-		if (Health <= 0 && pv.isMine)
+        //kill player if health is zero
+        if (Health <= 0 && pv.isMine)
         {
             //play death animation
             dropExp(playerLevel * 10);
-            PhotonNetwork.Disconnect();
-			Debug.Log("Player Killed");
-            
-		}
-	}
+            if (PhotonNetwork.connected)
+            {
+				this.GetComponent<PlayerName>().disablePlayername();
+                PhotonNetwork.Disconnect();
+            }
+            Debug.Log("Player Killed");
+            Application.LoadLevel("Flast");
+
+        }
+    }
 
     [PunRPC]
 	public override void takeDamage(int damageTaken)

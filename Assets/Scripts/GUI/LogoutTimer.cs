@@ -37,9 +37,10 @@ public class LogoutTimer : MonoBehaviour
 				TimerText.text = "" + timerNum;	
 			}
 		} 
-		else 
+		else if (timerNum <= 0 && LogoutPrompt.enabled)
 		{
-
+			PhotonNetwork.Disconnect();
+			Application.LoadLevel("LoginScene");
 		}
 	}
 
@@ -49,4 +50,10 @@ public class LogoutTimer : MonoBehaviour
         TimerText.text = "" + timerNum;
         timeElapsed = 0.0f;
     }
+
+	public void LogoutNowPressed()
+	{
+		PhotonNetwork.Disconnect ();
+		Application.LoadLevel ("LoginScene");
+	}
 }

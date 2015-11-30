@@ -44,4 +44,9 @@ public class PlayerName : MonoBehaviour
     {
          playerNameHolder.text = "" + playerName;
     }
+
+	public void disablePlayername()
+	{
+		Destroy(playerNameCanvas);
+	}
 }
