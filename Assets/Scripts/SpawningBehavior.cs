@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.Networking;
 
 public class SpawningBehavior : MonoBehaviour {
-
+	public Hashtable propsToSet;
     void Awake()
     {
         
@@ -16,8 +16,9 @@ public class SpawningBehavior : MonoBehaviour {
 
     void OnJoinedRoom()
     {
-		if(PhotonNetwork.isMasterClient)
-		SpawnEnemy ();
+		if (PhotonNetwork.isMasterClient) {
+			//PhotonView.Get (this).RPC ("SpawnEnemy", PhotonTargets.AllBuffered);
+		}
 			
     }
 	void OnJoinedLobby ()
@@ -32,12 +33,11 @@ public class SpawningBehavior : MonoBehaviour {
 	[PunRPC]
 	void SpawnEnemy()
 	{
-		
-		GameObject enemySpawner = this.gameObject;
-		GameObject enemy = PhotonNetwork.InstantiateSceneObject("Prefabs/Enemy", enemySpawner.transform.position, Quaternion.identity, 0, null);
-  		Debug.Log ("Enemy instantiation ID" + enemy.GetComponent<PhotonView> ().instantiationId);
-		enemy.transform.SetParent (enemySpawner.transform);
-		enemy.SetActive (true);
+			GameObject enemySpawner = this.gameObject;
+			GameObject enemy = PhotonNetwork.InstantiateSceneObject ("Prefabs/Enemy", enemySpawner.transform.position, Quaternion.identity, 0, null)as GameObject;
+			Debug.Log ("Enemy instantiation ID" + enemy.GetComponent<PhotonView> ().instantiationId);
+			enemy.transform.SetParent (enemySpawner.transform);
+			enemy.SetActive (true);
 	}
 
 

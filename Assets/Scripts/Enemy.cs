@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour, IDamagable<int>, IKillable<int>, IExperience
 	// Update is called once per frame
 	void Update () {
 	
-		Move ();
+		Move();
 		
 	}
 	[PunRPC]
@@ -59,19 +59,20 @@ public class Enemy : MonoBehaviour, IDamagable<int>, IKillable<int>, IExperience
 	}
 	void OnTriggerStay(Collider other)
 	{		
-		if (target == null) 
-		{
-			if (other.tag == "Player") 
-			{
-				target = other.transform;
+		if (PhotonNetwork.isMasterClient) {
+			if (target == null) {
+				if (other.tag == "Player") {
+					target = other.transform;
+				}
 			}
 		}
 	}
 	void OnTriggerExit (Collider other)
 	{
-		if(other.tag == "Player")
-		{
-			target=null;
+		if (PhotonNetwork.isMasterClient) {
+			if (other.tag == "Player") {
+				target = null;
+			}
 		}
 	}
 
@@ -80,18 +81,11 @@ public class Enemy : MonoBehaviour, IDamagable<int>, IKillable<int>, IExperience
         if(Health <= 0)
         {
             //dropExp(level);
-            enemyHealthScript.disableEnemyHPBar();
+//            enemyHealthScript.disableEnemyHPBar();
             activateEXP();
             PhotonNetwork.Destroy(this.gameObject);
         }
     }
-	public void Move()
-	{
-		if (target != null) {
-			this.transform.LookAt (target.transform);
-			rb.AddForce (this.transform.forward * accl);
-		}
-	}
     public void dropExp(int orbs)
     {
 
@@ -124,6 +118,16 @@ public class Enemy : MonoBehaviour, IDamagable<int>, IKillable<int>, IExperience
 
         }
     }
+	[PunRPC]
+	public void Move()
+	{
+		if (PhotonNetwork.isMasterClient) {
+			if (target != null) {
+				this.transform.LookAt (target.transform);
+				rb.AddForce (this.transform.forward * accl);
+			}
+		}
+	}
 
     public void gainExp(Experience orbs)
     {

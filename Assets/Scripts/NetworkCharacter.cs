@@ -4,6 +4,7 @@ using System.Collections;
 public class NetworkCharacter : Photon.MonoBehaviour {
     private Vector3 otherPosition = Vector3.zero;
     private Quaternion otherRotation = Quaternion.identity;
+
     
     
     void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
@@ -11,14 +12,15 @@ public class NetworkCharacter : Photon.MonoBehaviour {
         if (stream.isWriting)
         {
             stream.SendNext(GetComponent<Player>().getHealth());
-            //stream.SendNext(transform.position);
-            //stream.SendNext(transform.rotation);
+            stream.SendNext(transform.position);
+            stream.SendNext(transform.rotation);
             //stream.SendNext(transform.GetComponent<Rigidbody>());
             //stream.SendNext(health);
         }
         else
         {
-            
+			this.transform.position=(Vector3) stream.ReceiveNext();
+			this.transform.rotation=(Quaternion) stream.ReceiveNext();
             //otherPosition = (Vector3)stream.ReceiveNext();
             //otherRotation = (Quaternion)stream.ReceiveNext();
             //otherPlayer = (Rigidbody)stream.ReceiveNext();

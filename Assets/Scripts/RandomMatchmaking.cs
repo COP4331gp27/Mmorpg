@@ -8,12 +8,14 @@ public class RandomMatchmaking : Photon.PunBehaviour {
     private RoomInfo[] roomsList;
     private PhotonView myNetworkView;
     private GameObject player;
+	private
 
     // Use this for initialization
     void Start()
     {   
         PhotonNetwork.ConnectUsingSettings("0.1");
         PhotonNetwork.logLevel = PhotonLogLevel.ErrorsOnly;
+		PhotonNetwork.automaticallySyncScene = true;
     }
 
     void OnGUI()
@@ -48,7 +50,6 @@ public class RandomMatchmaking : Photon.PunBehaviour {
 
     public override void OnJoinedLobby()
     {
-        //PhotonNetwork.JoinRandomRoom();
     }
 
     void OnPhotonRandomJoinFailed()
