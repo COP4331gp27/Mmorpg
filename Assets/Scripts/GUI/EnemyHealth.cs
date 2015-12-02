@@ -44,7 +44,7 @@ public class EnemyHealth : MonoBehaviour
         //Set the position of the enemy hp bar above its enemy reference
         EnemyHPCanvas.transform.position = Vector3.Lerp(this.transform.position, (this.transform.position + enemyHPoffset), 1.0f);
 		//If the object has a camera and the canvas is still active
-        if (!MainCamera.Equals(null) && !EnemyHPCanvas.Equals(null))
+        if (MainCamera && !EnemyHPCanvas.Equals(null))
         {
 			//Make the canvas face the user camera
             EnemyHPCanvas.transform.LookAt(MainCamera.transform);
