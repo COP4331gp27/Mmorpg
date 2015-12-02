@@ -6,7 +6,7 @@ using System.Text;
 using MySql.Data.MySqlClient;
 
 
-namespace loginServer
+namespace LoginServer
 {
 	public class mysqlChecker 
 	{
