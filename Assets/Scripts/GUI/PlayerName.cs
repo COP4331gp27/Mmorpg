@@ -12,7 +12,6 @@ public class PlayerName : MonoBehaviour
     private GameStateManager GSM;
     public GameObject MainCamera;
 
-
     // Use this for initialization
     void Start ()
     {

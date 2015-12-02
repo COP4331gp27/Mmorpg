@@ -19,7 +19,7 @@ public class Player : Actor, IExperience
     public int playerHealth = 100;
     private int damage;
     private ArrayList otherPlayers = new ArrayList();
-	private string playerName = "Name";
+	private string playerName;
     public Transform expOrb;
     private Vector3 dropDistance;
     public InventoryManager myInventory;
@@ -35,20 +35,15 @@ public class Player : Actor, IExperience
 	//pv is set to find this object's photon view to perform network functions
     void Start()
     {
+		//Initialize photon view for the individual player
         pv = PhotonView.Get(this);
-
+		//Set player ID by session ID
+		playerName = "ID: " + pv.viewID.ToString();
+		//Initialize inventory
         myInventory = this.GetComponent<InventoryManager>();
         
-        //find all the players in the game
-        damage = playerLevel;
-        //GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-        playerHealth += (playerLevel * 10);
-        //populate an arraylist of these player's names
-        //foreach (gameobject p in players)
-        //{
-        //    otherplayers.add(p.getcomponent<player>().getname());
-        //}
-
+        //Set initial player damage
+        damage = playerLevel; 		
     }
 
     // Update is called once per frame
