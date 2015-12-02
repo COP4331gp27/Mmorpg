@@ -6,11 +6,12 @@ public class PlayerName : MonoBehaviour
 {
     private string playerName;
     private Text playerNameHolder;
-    private GameObject playerNameCanvas;
+    private Canvas playerNameCanvas;
     private float offsetY = 1f;
     private Vector3 playerNameOffset;
     private GameStateManager GSM;
     public GameObject MainCamera;
+
 
     // Use this for initialization
     void Start ()
@@ -20,7 +21,7 @@ public class PlayerName : MonoBehaviour
         //Get the player's name from Player script
         playerName = this.GetComponent<Player>().getName();
         //Initialize Canvas for nameplate
-        playerNameCanvas = GameObject.Find("PlayerName");
+        playerNameCanvas = this.transform.GetChild(0).GetComponent<Canvas>();
         //Initialize Text of nameplate
         playerNameHolder = playerNameCanvas.transform.GetChild(0).GetChild(0).GetComponent<Text>();
         //Set the player's name
