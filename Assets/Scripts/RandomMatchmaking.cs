@@ -3,10 +3,11 @@ using System.Collections;
 using System;
 
 public class RandomMatchmaking : Photon.PunBehaviour {
-
+	//This sets the room name
     private const string roomName = "Flast";
     private RoomInfo[] roomsList;
     private PhotonView myNetworkView;
+	//This tells the game what prefab to spawn
     private GameObject player;
 	private
 
@@ -42,36 +43,33 @@ public class RandomMatchmaking : Photon.PunBehaviour {
             }
         }
     }
-
+	//See what rooms are in the lobby
     void OnReceivedRoomListUpdate()
     {
         roomsList = PhotonNetwork.GetRoomList();
     }
 
-    public override void OnJoinedLobby()
-    {
-    }
+  //  public override void OnJoinedLobby()
+  // {
+  //  }
 
+	// This Throws error of not joining a room
     void OnPhotonRandomJoinFailed()
     {
         Debug.Log("Can't join random room!");
-        //PhotonNetwork.CreateRoom(null);
     }
-   
+   //Spawns player when they join 
     public override void OnJoinedRoom()
-    {
+	{
         SpawnPlayer();
-        myNetworkView = player.GetComponent<PhotonView>();
-        
+        myNetworkView = player.GetComponent<PhotonView>();   
         //if (PhotonNetwork.isMasterClient)
         //{
         //    SpawnEnemy();
-        //}
-        
-
-        
+        //} 
         
     }
+	//Instansiates player and enables
     [PunRPC]
     void SpawnPlayer()
     {
