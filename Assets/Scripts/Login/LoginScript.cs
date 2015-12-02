@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.EventSystems;
+using System.Threading;
 
 public class LoginScript : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class LoginScript : MonoBehaviour
     public InputField UsernameField;
     public InputField PasswordField;
 	private MessageData msg = new MessageData();
+	private int loggedin = 0;
+	private Thread listener;
 	//public Client network;
     	
 	void Start ()
@@ -23,6 +26,9 @@ public class LoginScript : MonoBehaviour
         UsernameField = UsernameField.GetComponent<InputField>();
         PasswordField = PasswordField.GetComponent<InputField>();
 
+		listener = new Thread (new ThreadStart (LoggingIn));
+		listener.IsBackground = true;
+
         system = EventSystem.current;
 
         LoginButton.onClick.AddListener(() => { LoggingIn(); });
@@ -30,8 +36,10 @@ public class LoginScript : MonoBehaviour
 
     void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
-            LoggingIn ();
+        if (Input.GetKeyDown (KeyCode.Return))
+		{
+			listener.Start ();
+		}
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
@@ -58,6 +66,16 @@ public class LoginScript : MonoBehaviour
                 system.SetSelectedGameObject(next.gameObject, new BaseEventData(system));
             }
         }
+		if (loggedin == 1)
+		{
+			listener.Abort ();
+			Application.LoadLevel ("Flast");
+		}
+		else if (loggedin != 0) 
+		{
+			listener.Abort();
+			loggedin = 0;
+		}
     }
 
     public void LoggingIn ()
@@ -69,17 +87,20 @@ public class LoginScript : MonoBehaviour
 		Debug.Log ("Sending " + msg.stringData);
 		Client.Send (msg);
 
-
+	
 		Debug.Log("entering LoginCheck");
 		win = Client.LoginCheck();
 
-		if (win == 1) {
-			Application.LoadLevel ("Flast");
-		}
+	
+		
+		loggedin = win;
+		
+
+
 		/*else 
 		{
 			Application.LoadLevel("LoginScene");
-		}*/
+		}
 
 		/*if ( UsernameField.text == userName && PasswordField.text == password)
         {

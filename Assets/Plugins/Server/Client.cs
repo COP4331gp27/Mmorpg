@@ -52,7 +52,7 @@ public class Client : MonoBehaviour
 		me.server.Send (sendData);
  	}
 
-	static public int LoginCheck()
+	static public int  LoginCheck()
 	{
 		Debug.Log ("checking Log in");
 		byte[] receivedBytes = new byte[512];		//this is the recieved message
