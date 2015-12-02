@@ -21,10 +21,22 @@ namespace loginServer
 		ArrayList _buffer = new ArrayList ();
 		ArrayList _byteBuffer = new ArrayList ();
 
+		static mysqlChecker dataBase;
+
 		public static void Main (string[] args)
 		{
 			loginServer inst = new loginServer ();
 			inst.setUpServer ();
+
+
+			Console.WriteLine ("creating mysql");
+			dataBase = new mysqlChecker ();
+			Console.WriteLine ("Checking");
+			dataBase.checkDB ("eric", "homberger");
+
+			dataBase.addUser ("test", "case");
+			dataBase.addUser ("eric", "case");
+			dataBase.checkDB ("test", "case");
 
 			while (true) 
 			{
@@ -113,19 +125,20 @@ namespace loginServer
 			{
 				case 0:
 					Console.WriteLine("this is login request");
-					HandleLoginREquest(Sender, data.stringData);
+					HandleLoginRequest(Sender, data.stringData);
 					break;
 			}
 		}
 
-		private void HandleLoginREquest(Socket sender, string request)
+		private void HandleLoginRequest(Socket sender, string request)
 		{
 			MessageData response = new MessageData ();
 			response.stringData = "login";
 			string[] elem = request.Split ('|');
 			Console.WriteLine (elem [0] + " " + elem [1]);
 
-			if (elem [0] == "eric" && elem [1] == "homberger") {
+			if (dataBase.checkDB(elem[0], elem[1]) == 1)
+			{
 				response.type = 1;
 			}
 			else 

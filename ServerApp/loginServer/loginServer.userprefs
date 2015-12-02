@@ -1,8 +1,10 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Assets\Plugins\Server\Client.cs">
+﻿<Properties StartupItem="loginServer/loginServer.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="loginServer/mysqlChecker.cs">
     <Files>
-      <File FileName="..\..\Assets\Plugins\Server\Client.cs" Line="10" Column="2" />
+      <File FileName="loginServer/loginServer.cs" Line="141" Column="4" />
+      <File FileName="loginServer/MessageData.cs" Line="44" Column="2" />
+      <File FileName="loginServer/mysqlChecker.cs" Line="95" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
