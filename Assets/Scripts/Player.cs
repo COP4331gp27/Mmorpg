@@ -8,10 +8,7 @@ using System.Linq;
 
 public class Player : Actor, IExperience
 {
-    /**
-	 * Create this class which all weapons will inherit from
-	 * public Weapon;
-	 * */
+    
     
     private float experience;
     private int playerLevel = 1;

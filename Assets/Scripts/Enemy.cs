@@ -2,8 +2,13 @@ using UnityEngine;
 using System.Collections;
 using AssemblyCSharp;
 using System;
-
+/*
+ * This class controls the enemy movement and tracks their data values
+ * such as health, their damage, etc.
+ * This class also gives the Enemy AI
+ */
 public class Enemy : MonoBehaviour, IDamagable<int>, IKillable<int>, IExperience {
+	//These values will be used later by the below functions
 	private int damage;
 	private int health;
 	public int level;
@@ -18,28 +23,36 @@ public class Enemy : MonoBehaviour, IDamagable<int>, IKillable<int>, IExperience
 	// Use this for initialization
 	void Start ()
     {
+		//find my enemy health script
         enemyHealthScript = this.GetComponent<EnemyHealth>();
+		//set health
         health = level * 100;
+		//set damage
         damage = level+10;
+		//this calls drop exp which spawns invisible EXP around the enemy to be dropped
         dropExp(level);
+		//get the rigidbody that's attached to 
 		rb = GetComponent<Rigidbody> ();
+		//set enemy acceleration
 		accl = 20;
     }
 	
 	// Update is called once per frame
 	void Update () {
-	
+		//moves the enemy every frame
 		Move();
 		
 	}
+	//this function gets called on the network to notify everyone that the enemy took damage
 	[PunRPC]
     public void takeDamage(int damageTaken)
     {
         health -= damageTaken;
     }
-
+	//this is called automatically by Unity when this object's collider intersects with another objects' collider
 	void OnCollisionEnter(Collision other)
 	{
+		//if the other object is a weapon, Enemy takes damage
 		if(other.gameObject.tag == "Weapon")
 		{
 			int weaponDamage = other.gameObject.GetComponent<ItemData>().damage;
@@ -48,7 +61,7 @@ public class Enemy : MonoBehaviour, IDamagable<int>, IKillable<int>, IExperience
 			Debug.Log("Took " + weaponDamage + " damage!");
 			
 		}
-		
+		//if the other object is a player, that player takes damage
 		if(other.gameObject.tag == "Player")
 		{
 			player = other.gameObject.GetComponent<Player>();
@@ -57,8 +70,12 @@ public class Enemy : MonoBehaviour, IDamagable<int>, IKillable<int>, IExperience
 			player.Kill(player.playerHealth);
 		}
 	}
+	//This function will trigger and repeat as long as the Enemy collider 
+	//is colliding with any other collider
 	void OnTriggerStay(Collider other)
 	{		
+		//if we are the master client, who is the only one that has enemies in it,
+		//then we update our target to the player who is in our hitbox
 		if (PhotonNetwork.isMasterClient) {
 			if (target == null) {
 				if (other.tag == "Player") {
@@ -67,6 +84,7 @@ public class Enemy : MonoBehaviour, IDamagable<int>, IKillable<int>, IExperience
 			}
 		}
 	}
+	//when a collider leaves the zone of the Enemy's collider, set my target to null
 	void OnTriggerExit (Collider other)
 	{
 		if (PhotonNetwork.isMasterClient) {
@@ -75,7 +93,7 @@ public class Enemy : MonoBehaviour, IDamagable<int>, IKillable<int>, IExperience
 			}
 		}
 	}
-
+	//kill this enemy (through the network) if it's health drops to zero or less
     public void Kill(int Health)
     {
         if(Health <= 0)
@@ -86,6 +104,7 @@ public class Enemy : MonoBehaviour, IDamagable<int>, IKillable<int>, IExperience
             PhotonNetwork.Destroy(this.gameObject);
         }
     }
+	//this creates the right amount of EXP for the enemy to drop, attaches it to the enemy, then sets it to inactive
     public void dropExp(int orbs)
     {
 
@@ -103,7 +122,7 @@ public class Enemy : MonoBehaviour, IDamagable<int>, IKillable<int>, IExperience
             myOrbs[i].SetActive(false);
         }
     }
-
+	//this turns on the EXP orbs and is only called when the enemy dies
     public void activateEXP()
     {
         itemDropDistance = new Vector3(UnityEngine.Random.Range(-2.0f, 2.0f), 4, UnityEngine.Random.Range(-2.0f, 2.0f));
@@ -118,6 +137,7 @@ public class Enemy : MonoBehaviour, IDamagable<int>, IKillable<int>, IExperience
 
         }
     }
+	//this moves the enemy on the server
 	[PunRPC]
 	public void Move()
 	{
@@ -128,15 +148,17 @@ public class Enemy : MonoBehaviour, IDamagable<int>, IKillable<int>, IExperience
 			}
 		}
 	}
-
+	//this is inherited from Actor but is not used
     public void gainExp(Experience orbs)
     {
         
     }
+	//this is a get function for Enemy's health used by other scripts
     public int getHealth()
     {
         return health;
     }
+	//this is currently not implemented
     public void gainLevel(int level)
     {
        //implement this for boss monsters. A world boss gaining levels would be cool
