@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+//this is the script attached to weapons on the ground.
 public class WeaponOnGround : MonoBehaviour
 {
 
@@ -16,7 +16,7 @@ public class WeaponOnGround : MonoBehaviour
     {
 	
 	}
-        
+    //when a player enters the trigger zone, turn on their appropriate weapon   
     void OnTriggerEnter(Collider other)
     {
         //USING TRIGGERS FOR NON-COMBAT
