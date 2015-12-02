@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+//this sets the position of the other player's weapon
+//this was needed because the weapon script is disabled on the other player
 public class OtherPlayerWeaponPosition : MonoBehaviour {
 
     public float zOffset = 1.0f;
