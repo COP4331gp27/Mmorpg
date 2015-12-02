@@ -115,13 +115,8 @@
      <Compile Include="Assets\Sales\IgnoreOwnZone.cs" />
      <Compile Include="Assets\Sales\OpenSales.cs" />
      <Compile Include="Assets\Scripts\Actor.cs" />
-     <Compile Include="Assets\Scripts\Ball.cs" />
-     <Compile Include="Assets\Scripts\BallUserControl.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
-     <Compile Include="Assets\Scripts\CameraFollowPlayer.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
-     <Compile Include="Assets\Scripts\EnemyController.cs" />
-     <Compile Include="Assets\Scripts\EnemyMove.cs" />
      <Compile Include="Assets\Scripts\Experience.cs" />
      <Compile Include="Assets\Scripts\FollowCamera.cs" />
      <Compile Include="Assets\Scripts\GUI\EnemyHealth.cs" />
@@ -134,8 +129,6 @@
      <Compile Include="Assets\Scripts\GUI\SettingsMenu.cs" />
      <Compile Include="Assets\Scripts\GUI\ToMenu.cs" />
      <Compile Include="Assets\Scripts\GameStateManager.cs" />
-     <Compile Include="Assets\Scripts\GravityAttractor.cs" />
-     <Compile Include="Assets\Scripts\GravityBody.cs" />
      <Compile Include="Assets\Scripts\Hammer.cs" />
      <Compile Include="Assets\Scripts\Interfaces.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
@@ -144,10 +137,6 @@
      <Compile Include="Assets\Scripts\Login\LoginScript.cs" />
      <Compile Include="Assets\Scripts\NetworkCharacter.cs" />
      <Compile Include="Assets\Scripts\NetworkWeapon.cs" />
-     <Compile Include="Assets\Scripts\Not Mine\FauxGravityAttractor.cs" />
-     <Compile Include="Assets\Scripts\Not Mine\FauxGravityBody.cs" />
-     <Compile Include="Assets\Scripts\Not Mine\FauxGravitySwitch.cs" />
-     <Compile Include="Assets\Scripts\Not Mine\PlayerGravityBody.cs" />
      <Compile Include="Assets\Scripts\OtherPlayerWeaponPosition.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
@@ -155,7 +144,7 @@
      <Compile Include="Assets\Scripts\SpawningBehavior.cs" />
      <Compile Include="Assets\Scripts\SpritePicker.cs" />
      <Compile Include="Assets\Scripts\Sword.cs" />
-     <Compile Include="Assets\Scripts\Terrain.cs" />
+     <Compile Include="Assets\Scripts\WeaponOnGround.cs" />
      <None Include="Assets\Plugins\Photon3Unity3D.xml" />
      <None Include="Assets\Plugins\release_history.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
@@ -171,10 +160,10 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/Paperclip/Documents/mmorpg/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Users/Evan/Documents/mmorpg/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
- <HintPath>C:/Users/Paperclip/Documents/mmorpg/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
+ <HintPath>C:/Users/Evan/Documents/mmorpg/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
