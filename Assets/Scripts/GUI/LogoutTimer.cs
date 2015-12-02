@@ -14,19 +14,22 @@ public class LogoutTimer : MonoBehaviour
 
 	void Start()
 	{	
+        //Initialize Logout Canvas and elements
 		LogoutPrompt = LogoutPrompt.GetComponent<Canvas> ();
 		timer = timer.GetComponent<Transform>();
 		TimerText = timer.GetComponent<Text>();
 		CancelPress = CancelPress.GetComponent<Button> ();
-
+        //Set initial timer amounts
 		timerNum = 10;
 		timeElapsed = 0.0f;
-
+        //Disable the canvas with logout prompt
 		LogoutPrompt.enabled = false;
 	}
 
 	void Update()
 	{
+        //On update, If timer is above 0
+        //decrement timer and update text
 		if (timerNum > 0 && LogoutPrompt.enabled) {
 			timeElapsed += Time.deltaTime;
 
@@ -37,6 +40,7 @@ public class LogoutTimer : MonoBehaviour
 				TimerText.text = "" + timerNum;	
 			}
 		} 
+        //If timer hits 0, disconnect player and load login scene
 		else if (timerNum <= 0 && LogoutPrompt.enabled)
 		{
 			PhotonNetwork.Disconnect();
@@ -44,6 +48,7 @@ public class LogoutTimer : MonoBehaviour
 		}
 	}
 
+    //If cancel is pressed, reset the timer
 	public void CancelPressed()
 	{ 
 		timerNum = 10;
@@ -51,6 +56,7 @@ public class LogoutTimer : MonoBehaviour
         timeElapsed = 0.0f;
     }
 
+    //If logout now is pressed, also logout
 	public void LogoutNowPressed()
 	{
 		PhotonNetwork.Disconnect ();
