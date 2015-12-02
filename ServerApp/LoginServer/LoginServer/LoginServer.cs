@@ -31,12 +31,12 @@ namespace LoginServer
 
 			Console.WriteLine ("creating mysql");
 			dataBase = new mysqlChecker ();
-			Console.WriteLine ("Checking");
+			/*Console.WriteLine ("Checking");
 			dataBase.checkDB ("eric", "homberger");
 
 			dataBase.addUser ("test", "case");
 			dataBase.addUser ("eric", "case");
-			dataBase.checkDB ("test", "case");
+			dataBase.checkDB ("test", "case");*/
 
 			while (true) 
 			{
@@ -127,7 +127,22 @@ namespace LoginServer
 				Console.WriteLine("this is login request");
 				HandleLoginRequest(Sender, data.stringData);
 				break;
+			case 1:
+				Console.WriteLine ("this is an account creation request");
+				HandleCreateRequest (Sender, data.stringData);
+
 			}
+		}
+
+		private void HandleCreateRequest(Socket sender, string request){
+			MessageData response = new MessageData ();
+			response.stringData = "create";
+			string[] elem = request.Split ('|');
+			Console.WriteLine (elem [0] + " " + elem [1]);
+
+			response = dataBase.addUser (elem [0], elem [1]);
+
+			respond (sender, response);
 		}
 
 		private void HandleLoginRequest(Socket sender, string request)
@@ -137,14 +152,16 @@ namespace LoginServer
 			string[] elem = request.Split ('|');
 			Console.WriteLine (elem [0] + " " + elem [1]);
 
-			if (dataBase.checkDB(elem[0], elem[1]) == 1)
+
+			response.type = dataBase.checkDB (elem [0], elem [1]);
+/*			if (dataBase.checkDB(elem[0], elem[1]) == 1)
 			{
 				response.type = 1;
 			}
 			else 
 			{
 				response.type = -1;
-			}
+			}*/
 			Console.WriteLine ("Responding with " + response.type);
 			respond (sender, response);
 		}

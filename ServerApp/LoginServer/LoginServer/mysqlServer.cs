@@ -71,7 +71,7 @@ namespace LoginServer
 			}
 		}
 
-		public bool addUser(string name, string pass)
+		public int addUser(string name, string pass)
 		{
 			command = "SELECT name FROM usernames WHERE name='" + name + "';";
 			mysqlCom = new MySqlCommand (command, conn);
@@ -88,7 +88,7 @@ namespace LoginServer
 				Console.WriteLine ("duplicate found");
 				reader.Close ();
 				conn.Close ();
-				return false;
+				return -1;
 			}
 			else 
 			{
@@ -103,7 +103,7 @@ namespace LoginServer
 				Console.WriteLine ("Sent command " + command);
 
 				conn.Close ();
-				return true;
+				return 1;
 			}
 		}
 	}
