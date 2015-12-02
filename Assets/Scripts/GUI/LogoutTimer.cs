@@ -26,7 +26,7 @@ public class LogoutTimer : MonoBehaviour
 		LogoutPrompt.enabled = false;
 	}
 
-	void Update()
+	void LateUpdate()
 	{
         //On update, If timer is above 0
         //decrement timer and update text
