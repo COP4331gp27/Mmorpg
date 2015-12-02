@@ -6,12 +6,12 @@ public class Experience : MonoBehaviour{
 
     private float expValue;
 
-  
+  	//sets amount of exp for orb drop
     public void setExp(int playerLevel)
     {
         expValue = ((float) playerLevel+10)*Random.Range(0.5f, 2.0f);
     }
-
+	//gives you exp value
     public float getExp()
     {
         return expValue;
@@ -25,7 +25,7 @@ public class Experience : MonoBehaviour{
 	void Update () {
 	
 	}
-
+	//allows for pick up of exp by player
     void OnTriggerStay(Collider c)
     {
         if(c.tag == "Player")
