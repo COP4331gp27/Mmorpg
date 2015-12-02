@@ -130,6 +130,7 @@ namespace LoginServer
 			case 1:
 				Console.WriteLine ("this is an account creation request");
 				HandleCreateRequest (Sender, data.stringData);
+				break;
 
 			}
 		}
@@ -140,7 +141,7 @@ namespace LoginServer
 			string[] elem = request.Split ('|');
 			Console.WriteLine (elem [0] + " " + elem [1]);
 
-			response = dataBase.addUser (elem [0], elem [1]);
+			response.type = dataBase.addUser (elem [0], elem [1]);
 
 			respond (sender, response);
 		}
