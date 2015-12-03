@@ -24,6 +24,7 @@ public class Player : Actor, IExperience
     private Vector3 dropDistance;
     public InventoryManager myInventory;
     public PhotonView pv;
+	public AudioSource audioSource;
     // Use this for initialization
 	//we ended up not using this, but I'm leaving here for future development
     //void Awake()
@@ -37,6 +38,8 @@ public class Player : Actor, IExperience
     {
 		//Initialize photon view for the individual player
         pv = PhotonView.Get(this);
+		if(pv.isMine)
+			audioSource.Play();
 		//Set player ID by session ID
 		playerName = "ID: " + pv.viewID.ToString();
 		//Initialize inventory

@@ -20,7 +20,7 @@ public class PlayerName : MonoBehaviour
         //Get the player's name from Player script
         playerName = this.GetComponent<Player>().getName();
         //Initialize Canvas for nameplate
-        playerNameCanvas = this.transform.GetChild(0).GetComponent<Canvas>();
+        playerNameCanvas = this.transform.GetChild(2).GetComponent<Canvas>();
         //Initialize Text of nameplate
         playerNameHolder = playerNameCanvas.transform.GetChild(0).GetChild(0).GetComponent<Text>();
         //Set the player's name
