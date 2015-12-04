@@ -13,32 +13,32 @@ using System.Collections;
 using System.Collections.Generic;
 namespace AssemblyCSharp
 {
-	
+	// anything that implements this is killable
 	public interface IKillable<T>{
 		void Kill(T Health);
 	}
-	
+	//anything that implements this is damagable
 	public interface IDamagable<T>{
 		void takeDamage(T damageTaken);
 	}
-	
+	//anything that implements this is destructible
 	public interface IDestructible<T>{
 		void Destroy(T item);
 	}
-	
+	//anything that implements this is an item
 	public interface IItems{
 		void pickUpItem(ItemData item);
 		void dropItem(InventoryManager inventory);
 	}
 	
 
-
+	// anything that implements this can gain exp
 	public interface IExperience{
         void dropExp(int orbs);
 		void gainExp(Experience orbs);
 		void gainLevel(int level);
 	}
-
+	// anything that implements this can sell items
 	public interface IVendor{
 		void openShop(GameObject player);
 	}

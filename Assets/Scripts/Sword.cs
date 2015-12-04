@@ -16,45 +16,41 @@ public class Sword : MonoBehaviour
     public Transform player;
     void Start()
     {
-        //player = GetComponentInParent<Transform> ();     
-
         //This is getting camera attached to player who owns this sword
         importedCamera = this.transform.parent.parent.transform.GetChild(0).gameObject; 
+		//This is the distance 
         offset = new Vector3(xOffset, yOffset, zOffset);
     }
     [PunRPC]
     void LateUpdate()
     {
+		//Make sure your player is their
 		if (!player.Equals (null))
         {
-           /// if ()
-            //{
-            //}
-           // else
+			//Move sword based on horizontal user input
                 offset = Quaternion.AngleAxis (Input.GetAxis ("Mouse X") * turnSpeed, Vector3.up) * offset;
-
-			//if()
-           // {
-
-            //}
-          //  else
+			//Move sword based on vertical user input 
 			    offset = Quaternion.AngleAxis (Input.GetAxis ("Mouse Y") * turnSpeed, Vector3.right) * offset;
-			transform.forward = player.forward;
-			transform.position = player.position + offset;
-			transform.LookAt (player.position);
+			//Set sword direction off of player direction
+				transform.forward = player.forward;
+			//Have the sword to move with player
+				transform.position = player.position + offset;
+			//Sword hilt points to player
+				transform.LookAt (player.position);
 		}
     }
+	//Shows the sword is picked up
     public void setWeapon(bool pickedUp)
     {
         playerHas = pickedUp;
     }
-
+	//Gets weapon damage
     public int getDamage()
     {
         return damage;
     }
 
-    
+    //Deals Damage to Player
     void OnCollisionEnter(Collision collision)
     {
         if(collision.collider.tag == "Player")
