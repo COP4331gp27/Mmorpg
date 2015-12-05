@@ -26,4 +26,4 @@ public class NetworkCharacter : Photon.MonoBehaviour {
 			this.transform.rotation=(Quaternion) stream.ReceiveNext();
         }
     }
-
+}
